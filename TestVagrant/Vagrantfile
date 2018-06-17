@@ -1,0 +1,46 @@
+Vagrant.configure("2") do |config|
+	config.vm.box = "centos/7"
+    config.vm.box_check_update = true
+    config.ssh.forward_agent = true
+    config.vbguest.auto_update = true
+    config.vm.post_up_message = "DEVHOST PROVISIONED AND RUNNING"
+    
+    ############# <PORT FORWARDING>  #############
+    #config.vm.network "forwarded_port", guest: 80,      host: 8001  #http
+    #config.vm.network "forwarded_port", guest: 443,     host: 44301 #https
+    config.vm.network :forwarded_port,  guest: 22,      host: 3333, id: "ssh", disabled: true # default ssh disabled
+    config.vm.network "forwarded_port", guest: 22,      host: 2205  #ssh
+    ############# </PORT FORWARDING> #############
+    
+    config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+    config.vm.provider "virtualbox" do |vb|
+        vb.gui = false
+        vb.memory = "2048"
+        # Solvians uses a custom DNS for internal host names: this tells virtualbox to NAT the DNS
+        vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    end
+    
+    # base
+    config.vm.provision "shell", path: "deploy/provision-bases.sh"
+    
+    # ssh keys
+    config.ssh.insert_key = false
+    config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "/tmp/vagrant/setup_ssh_keys/id_rsa.pub"
+    config.ssh.private_key_path = [Vagrant::user_data_path().to_s() + "/insecure_private_key", "~/.ssh/id_rsa"]
+    config.vm.provision "shell", path: "deploy/ssh-keys/setup-ssh-keys.sh"
+    
+    # Java 1.8 
+    config.vm.provision "shell", path: "deploy/install-java.sh"
+
+    config.vm.provision "shell", run: 'always', privileged: false, inline: <<-SHELL
+        set -euxo pipefail
+        IFS=$'\n\t'
+
+        # Build the frontend
+        export JAVA_HOME=/usr/java/jdk1.8.0_25/
+		export PATH=$PATH:$JAVA_HOME
+		
+		echo $JAVA_HOME
+		echo $PATH
+    SHELL
+end
