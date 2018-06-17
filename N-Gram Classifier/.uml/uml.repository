@@ -1,0 +1,928 @@
+<?xml version="1.0" standalone="yes"?>
+
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML/1.4">
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>ru.novosoft.uml.impl.UMLRepositoryImplXMIWriter</XMI.exporter>
+    </XMI.documentation>
+  </XMI.header>
+  <XMI.content>
+    <UML:Primitive xmi.id="boolean" isRoot="false" isLeaf="true" isAbstract="false" name="boolean" isSpecification="false"></UML:Primitive>
+    <UML:Primitive xmi.id="byte" isRoot="false" isLeaf="true" isAbstract="false" name="byte" isSpecification="false"></UML:Primitive>
+    <UML:Primitive xmi.id="char" isRoot="false" isLeaf="true" isAbstract="false" name="char" isSpecification="false"></UML:Primitive>
+    <UML:Primitive xmi.id="double" isRoot="false" isLeaf="true" isAbstract="false" name="double" isSpecification="false"></UML:Primitive>
+    <UML:Primitive xmi.id="float" isRoot="false" isLeaf="true" isAbstract="false" name="float" isSpecification="false"></UML:Primitive>
+    <UML:Primitive xmi.id="int" isRoot="false" isLeaf="true" isAbstract="false" name="int" isSpecification="false"></UML:Primitive>
+    <UML:Primitive xmi.id="long" isRoot="false" isLeaf="true" isAbstract="false" name="long" isSpecification="false"></UML:Primitive>
+    <UML:Primitive xmi.id="short" isRoot="false" isLeaf="true" isAbstract="false" name="short" isSpecification="false"></UML:Primitive>
+    <UML:Primitive xmi.id="void" isRoot="false" isLeaf="true" isAbstract="false" name="void" isSpecification="false"></UML:Primitive>
+    <UML:Package xmi.id="xldb03bmartinsNGramClassifier0" isRoot="false" isLeaf="false" isAbstract="false" name="pt.tumba.ngram" isSpecification="false">
+      <UML:Namespace.ownedElement>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier1" isRoot="false" isLeaf="false" isAbstract="false" name="LMConstants" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier2">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier3" ownerScope="classifier" name="SKIPABLE" visibility="public" isSpecification="false" changeability="frozen" ordering="unordered" type="byte">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier6" language="java" body=" new byte[]
+            {32, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 10, 13}"></UML:Expression>
+              </UML:Attribute.initialValue>
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id="xldb03bmartinsNGramClassifier4">
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id="xldb03bmartinsNGramClassifier5" lower="0" upper="-1"></UML:MultiplicityRange>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+            </UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier7" ownerScope="classifier" name="USEDNGRAMS" visibility="public" isSpecification="false" changeability="frozen" ordering="unordered" type="int">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier8" language="java" body=" 400"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier9" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier10" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier473 xldb03bmartinsNGramClassifier474" name="CathegorizerImpl" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier56 xldb03bmartinsNGramClassifier61 xldb03bmartinsNGramClassifier68 xldb03bmartinsNGramClassifier70 xldb03bmartinsNGramClassifier72 xldb03bmartinsNGramClassifier77 xldb03bmartinsNGramClassifier79 xldb03bmartinsNGramClassifier85 xldb03bmartinsNGramClassifier96 xldb03bmartinsNGramClassifier98 xldb03bmartinsNGramClassifier103 xldb03bmartinsNGramClassifier116 xldb03bmartinsNGramClassifier118" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier11" ownerScope="classifier" name="LMFilter" visibility="public" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier13">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier15" language="java" body="
+        new FilenameFilter() {
+            public boolean accept(File dir, String name) {
+//                return name.endsWith(&quot;.lm&quot;);
+                return true;
+            }
+        }"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier16" ownerScope="instance" name="profiles" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier18"></UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier20" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="deltaRank" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier23" kind="in" type="xldb03bmartinsNGramClassifier21" name="prof1" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier26" kind="in" type="xldb03bmartinsNGramClassifier24" name="prof2" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier475" kind="return" type="double" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier28" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="main" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier30" kind="in" type="xldb03bmartinsNGramClassifier476" name="args" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier477" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier32" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="CathegorizerImpl" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier478" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier34" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="CathegorizerImpl" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier37" kind="in" type="xldb03bmartinsNGramClassifier36" name="dirName" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier479" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier39" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="CathegorizerImpl" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier41" kind="in" type="xldb03bmartinsNGramClassifier480" name="fileNames" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier481" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier43" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="addProfile" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier44" kind="in" type="xldb03bmartinsNGramClassifier21" name="prof" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier482" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier46" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="true" isAbstract="false" isQuery="false" name="init" visibility="private" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier48" kind="in" type="xldb03bmartinsNGramClassifier47" name="fi" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier50" kind="in" type="xldb03bmartinsNGramClassifier483" name="names" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier484" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier52" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="match" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier53" kind="in" type="xldb03bmartinsNGramClassifier24" name="prof" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier485" kind="return" type="xldb03bmartinsNGramClassifier24" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier55" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier21" isRoot="false" isLeaf="false" isAbstract="false" name="IterableProfile" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier260" stereotype="xldb03bmartinsNGramClassifier22">
+          <UML:Namespace.ownedElement>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier257" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="ngrams" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier258" kind="return" type="xldb03bmartinsNGramClassifier134" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier259" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Interface>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier24" isRoot="false" isLeaf="false" isAbstract="false" name="Profile" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier255" stereotype="xldb03bmartinsNGramClassifier25">
+          <UML:Namespace.ownedElement>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier251" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getRank" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier252" kind="in" type="xldb03bmartinsNGramClassifier101" name="gram" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier253" kind="return" type="double" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier254" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier59" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier60" name="NGramException" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier436 xldb03bmartinsNGramClassifier438" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier429" ownerScope="instance" name="msg" visibility="package" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier36"></UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier430" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="NGramException" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier431" kind="in" type="xldb03bmartinsNGramClassifier36" name="msg" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier432" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier433" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="toString" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier434" kind="return" type="xldb03bmartinsNGramClassifier36" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier435" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier63" isRoot="false" isLeaf="false" isAbstract="false" name="Constants" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier64">
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier189" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier65" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier66 xldb03bmartinsNGramClassifier67" name="EntryProfile" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier222 xldb03bmartinsNGramClassifier224 xldb03bmartinsNGramClassifier226 xldb03bmartinsNGramClassifier228 xldb03bmartinsNGramClassifier236 xldb03bmartinsNGramClassifier238 xldb03bmartinsNGramClassifier240 xldb03bmartinsNGramClassifier242 xldb03bmartinsNGramClassifier248" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier190" ownerScope="instance" name="grams" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier191"></UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier193" ownerScope="instance" name="gramsStrings" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier191"></UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier194" ownerScope="instance" name="theLimit" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="int">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier195" language="java" body=" -1"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier196" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="EntryProfile" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier197" kind="in" type="xldb03bmartinsNGramClassifier82" name="stream" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier198" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier199" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="EntryProfile" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier200" kind="in" type="xldb03bmartinsNGramClassifier82" name="stream" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier201" kind="in" type="int" name="theLimit" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier202" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier203" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="EntryProfile" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier204" kind="in" type="xldb03bmartinsNGramClassifier36" name="fname" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier205" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier206" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="EntryProfile" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier207" kind="in" type="xldb03bmartinsNGramClassifier36" name="fname" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier208" kind="in" type="int" name="theLimit" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier209" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier210" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="true" isAbstract="false" isQuery="false" name="digestStream" visibility="private" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier211" kind="in" type="xldb03bmartinsNGramClassifier82" name="stream" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier212" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier213" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getRank" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier214" kind="in" type="xldb03bmartinsNGramClassifier101" name="ng" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier215" kind="return" type="double" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier216" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getRank" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier217" kind="in" type="xldb03bmartinsNGramClassifier36" name="ng" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier218" kind="return" type="double" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier219" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="ngrams" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier220" kind="return" type="xldb03bmartinsNGramClassifier134" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier221" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier74" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier75 xldb03bmartinsNGramClassifier76" name="LMDataProfile" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier143 xldb03bmartinsNGramClassifier146 xldb03bmartinsNGramClassifier148 xldb03bmartinsNGramClassifier150 xldb03bmartinsNGramClassifier152 xldb03bmartinsNGramClassifier154 xldb03bmartinsNGramClassifier156 xldb03bmartinsNGramClassifier161" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier120" ownerScope="instance" name="name" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier36"></UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier121" ownerScope="instance" name="rankedNGrams" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier18"></UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier122" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="LMDataProfile" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier123" kind="in" type="xldb03bmartinsNGramClassifier36" name="name" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier124" kind="in" type="xldb03bmartinsNGramClassifier82" name="stream" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier125" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier126" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getName" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier127" kind="return" type="xldb03bmartinsNGramClassifier36" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier128" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getRank" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier129" kind="in" type="xldb03bmartinsNGramClassifier101" name="gram" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier130" kind="return" type="double" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier131" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getSize" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier132" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier133" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="ngrams" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier136" kind="return" type="xldb03bmartinsNGramClassifier134" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier137" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="true" isAbstract="false" isQuery="false" name="readStream" visibility="private" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier138" kind="in" type="xldb03bmartinsNGramClassifier82" name="stream" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier139" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier140" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="toString" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier141" kind="return" type="xldb03bmartinsNGramClassifier36" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier142" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier101" isRoot="false" isLeaf="false" isAbstract="false" name="NGram" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier279 xldb03bmartinsNGramClassifier281" stereotype="xldb03bmartinsNGramClassifier102">
+          <UML:Namespace.ownedElement>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier262" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="equals" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier264" kind="in" type="xldb03bmartinsNGramClassifier263" name="bytes" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier265" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier266" kind="in" type="int" name="length" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier267" kind="return" type="boolean" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier268" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getByte" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier269" kind="in" type="int" name="pos" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier270" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier271" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getNGramImpl" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier273" kind="return" type="xldb03bmartinsNGramClassifier272" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier274" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getSize" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier275" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier276" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getString" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier277" kind="return" type="xldb03bmartinsNGramClassifier36" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier278" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier163" isRoot="false" isLeaf="false" isAbstract="false" name="LMWriter" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier178 xldb03bmartinsNGramClassifier180 xldb03bmartinsNGramClassifier187" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier164" ownerScope="classifier" name="_theInstance" visibility="private" isSpecification="false" changeability="frozen" ordering="unordered" type="xldb03bmartinsNGramClassifier163">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier165" language="java" body=" new LMWriter()"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier166" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getInstance" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier167" kind="return" type="xldb03bmartinsNGramClassifier163" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier168" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="main" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier170" kind="in" type="xldb03bmartinsNGramClassifier169" name="args" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier171" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier172" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="LMWriter" visibility="private" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier173" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier174" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier184" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier185 xldb03bmartinsNGramClassifier186" name="CountedNGram" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier327 xldb03bmartinsNGramClassifier330 xldb03bmartinsNGramClassifier332 xldb03bmartinsNGramClassifier334" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier283" ownerScope="instance" name="count" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="int">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier284" language="java" body=" 1"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier285" ownerScope="instance" name="gram" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier101"></UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier286" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="CountedNGram" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier288" kind="in" type="xldb03bmartinsNGramClassifier287" name="ba" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier289" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier290" kind="in" type="int" name="len" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier291" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier292" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="CountedNGram" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier293" kind="in" type="xldb03bmartinsNGramClassifier101" name="ng" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier294" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier295" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="compareTo" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier296" kind="in" type="xldb03bmartinsNGramClassifier87" name="e1" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier297" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier298" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="equals" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier300" kind="in" type="xldb03bmartinsNGramClassifier299" name="bytes" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier301" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier302" kind="in" type="int" name="length" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier303" kind="return" type="boolean" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier304" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="equals" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier305" kind="in" type="xldb03bmartinsNGramClassifier87" name="e1" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier306" kind="return" type="boolean" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier307" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getByte" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier308" kind="in" type="int" name="pos" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier309" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier310" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getCount" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier311" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier312" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getNGram" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier313" kind="return" type="xldb03bmartinsNGramClassifier101" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier314" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getNGramImpl" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier315" kind="return" type="xldb03bmartinsNGramClassifier272" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier316" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getSize" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier317" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier318" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getString" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier319" kind="return" type="xldb03bmartinsNGramClassifier36" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier320" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="hashCode" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier321" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier322" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="inc" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier323" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier324" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="toString" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier325" kind="return" type="xldb03bmartinsNGramClassifier36" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier326" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier272" isRoot="false" isLeaf="false" isAbstract="false" name="NGramImpl" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier407 xldb03bmartinsNGramClassifier410 xldb03bmartinsNGramClassifier412 xldb03bmartinsNGramClassifier414" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier336" ownerScope="classifier" name="known" visibility="public" isSpecification="false" changeability="changeable" ordering="unordered" type="xldb03bmartinsNGramClassifier272">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier339" language="java" body=" new NGramImpl[512]"></UML:Expression>
+              </UML:Attribute.initialValue>
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id="xldb03bmartinsNGramClassifier337">
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id="xldb03bmartinsNGramClassifier338" lower="0" upper="-1"></UML:MultiplicityRange>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+            </UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier340" ownerScope="classifier" name="knownCount" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="int">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier341" language="java" body=" 0"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier342" ownerScope="classifier" name="knownStep" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="int">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier343" language="java" body=" 400"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier344" ownerScope="classifier" name="useCache" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="boolean">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier345" language="java" body=" false"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier346" ownerScope="instance" name="bytes" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="byte">
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id="xldb03bmartinsNGramClassifier347">
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id="xldb03bmartinsNGramClassifier348" lower="0" upper="-1"></UML:MultiplicityRange>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+            </UML:Attribute>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier349" ownerScope="instance" name="size" visibility="protected" isSpecification="false" changeability="changeable" ordering="unordered" type="int"></UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier350" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="true" isAbstract="false" isQuery="false" name="appendCode" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier351" kind="in" type="int" name="h" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier352" kind="in" type="byte" name="b" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier353" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier354" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="code" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier356" kind="in" type="xldb03bmartinsNGramClassifier355" name="bytes" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier357" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier358" kind="in" type="int" name="length" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier359" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier360" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getNGramImplCount" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier361" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier362" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="newNGram" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier364" kind="in" type="xldb03bmartinsNGramClassifier363" name="bytes" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier365" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier366" kind="return" type="xldb03bmartinsNGramClassifier101" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier367" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="newNGram" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier369" kind="in" type="xldb03bmartinsNGramClassifier368" name="bytes" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier370" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier371" kind="in" type="int" name="length" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier372" kind="return" type="xldb03bmartinsNGramClassifier101" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier373" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="NGramImpl" visibility="protected" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier374" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier375" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="NGramImpl" visibility="private" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier377" kind="in" type="xldb03bmartinsNGramClassifier376" name="bytes" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier378" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier379" kind="in" type="int" name="length" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier380" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier381" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="NGramImpl" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier382" kind="in" type="xldb03bmartinsNGramClassifier36" name="str" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier383" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier384" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="equals" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier386" kind="in" type="xldb03bmartinsNGramClassifier385" name="bytes" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier387" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier388" kind="in" type="int" name="length" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier389" kind="return" type="boolean" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier390" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="equals" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier391" kind="in" type="xldb03bmartinsNGramClassifier87" name="e1" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier392" kind="return" type="boolean" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier393" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getByte" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier394" kind="in" type="int" name="pos" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier395" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier396" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getNGramImpl" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier397" kind="return" type="xldb03bmartinsNGramClassifier272" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier398" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getSize" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier399" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier400" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getString" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier401" kind="return" type="xldb03bmartinsNGramClassifier36" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier402" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="hashCode" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier403" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier404" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="toString" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier405" kind="return" type="xldb03bmartinsNGramClassifier36" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier406" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier416" isRoot="false" isLeaf="false" isAbstract="false" name="Cathegorizer" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier425 xldb03bmartinsNGramClassifier427" stereotype="xldb03bmartinsNGramClassifier417">
+          <UML:Namespace.ownedElement>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier418" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="addProfile" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier419" kind="in" type="xldb03bmartinsNGramClassifier21" name="prof" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier420" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier421" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="match" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier422" kind="in" type="xldb03bmartinsNGramClassifier24" name="prof" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier423" kind="return" type="xldb03bmartinsNGramClassifier24" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier424" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier440" isRoot="false" isLeaf="false" isAbstract="false" name="ProtoReader" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier458 xldb03bmartinsNGramClassifier460 xldb03bmartinsNGramClassifier462 xldb03bmartinsNGramClassifier464 xldb03bmartinsNGramClassifier466 xldb03bmartinsNGramClassifier468 xldb03bmartinsNGramClassifier471" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier441" ownerScope="classifier" name="_theInstance" visibility="private" isSpecification="false" changeability="frozen" ordering="unordered" type="xldb03bmartinsNGramClassifier440">
+              <UML:Attribute.initialValue>
+                <UML:Expression xmi.id="xldb03bmartinsNGramClassifier442" language="java" body=" new ProtoReader()"></UML:Expression>
+              </UML:Attribute.initialValue>
+            </UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier443" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="getInstance" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier444" kind="return" type="xldb03bmartinsNGramClassifier440" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier445" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="newNGram" visibility="protected" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier446" kind="in" type="xldb03bmartinsNGramClassifier191" name="count" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier448" kind="in" type="xldb03bmartinsNGramClassifier447" name="ba" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier449" kind="in" type="int" name="start" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier450" kind="in" type="int" name="len" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier451" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier452" ownerScope="classifier" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="read" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier453" kind="in" type="xldb03bmartinsNGramClassifier82" name="stream" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier454" kind="return" type="xldb03bmartinsNGramClassifier18" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier455" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="ProtoReader" visibility="private" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier456" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier457" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+      </UML:Namespace.ownedElement>
+    </UML:Package>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier100" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier102" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier103" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier104" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier101"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier104" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier107" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier109" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier111" isSpecification="false" child="xldb03bmartinsNGramClassifier110" parent="xldb03bmartinsNGramClassifier105"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier112" isSpecification="false" child="xldb03bmartinsNGramClassifier110" parent="xldb03bmartinsNGramClassifier18"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier113" isSpecification="false" child="xldb03bmartinsNGramClassifier110" parent="xldb03bmartinsNGramClassifier106"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier114" isSpecification="false" child="xldb03bmartinsNGramClassifier110" parent="xldb03bmartinsNGramClassifier108"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier115" isSpecification="false" child="xldb03bmartinsNGramClassifier110" parent="xldb03bmartinsNGramClassifier88"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier116" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier117" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier110"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier117" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier118" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier119" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier24"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier119" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Package xmi.id="xldb03bmartinsNGramClassifier12" isRoot="false" isLeaf="false" isAbstract="false" name="java.io" isSpecification="false">
+      <UML:Namespace.ownedElement>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier13" isRoot="false" isLeaf="false" isAbstract="true" name="FilenameFilter" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier14"></UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier47" isRoot="false" isLeaf="false" isAbstract="false" name="File" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier82" isRoot="false" isLeaf="false" isAbstract="true" name="InputStream" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier83" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier84" name="FileInputStream" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier88" isRoot="false" isLeaf="false" isAbstract="true" name="Serializable" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier89"></UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier158" isRoot="false" isLeaf="false" isAbstract="false" name="FilterInputStream" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier159" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier160" name="BufferedInputStream" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier175" isRoot="false" isLeaf="false" isAbstract="true" name="OutputStream" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier176" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier177" name="FileOutputStream" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+      </UML:Namespace.ownedElement>
+    </UML:Package>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier135" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier14" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier143" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier144 xldb03bmartinsNGramClassifier145" client="xldb03bmartinsNGramClassifier74" supplier="xldb03bmartinsNGramClassifier101"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier144" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier145" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier146" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier147" client="xldb03bmartinsNGramClassifier74" supplier="xldb03bmartinsNGramClassifier134"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier147" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier148" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier149" client="xldb03bmartinsNGramClassifier74" supplier="xldb03bmartinsNGramClassifier92"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier149" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier150" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier151" client="xldb03bmartinsNGramClassifier74" supplier="xldb03bmartinsNGramClassifier36"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier151" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier152" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier153" client="xldb03bmartinsNGramClassifier74" supplier="xldb03bmartinsNGramClassifier110"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier153" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier154" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier155" client="xldb03bmartinsNGramClassifier74" supplier="xldb03bmartinsNGramClassifier82"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier155" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier156" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier157" client="xldb03bmartinsNGramClassifier74" supplier="xldb03bmartinsNGramClassifier18"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier157" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier160" isSpecification="false" child="xldb03bmartinsNGramClassifier159" parent="xldb03bmartinsNGramClassifier158"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier161" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier162" client="xldb03bmartinsNGramClassifier74" supplier="xldb03bmartinsNGramClassifier159"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier162" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier169" isRoot="false" isLeaf="false" isAbstract="false" name="String[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Package xmi.id="xldb03bmartinsNGramClassifier17" isRoot="false" isLeaf="false" isAbstract="false" name="java.util" isSpecification="false">
+      <UML:Namespace.ownedElement>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier18" isRoot="false" isLeaf="false" isAbstract="true" name="List" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier19"></UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier105" isRoot="false" isLeaf="false" isAbstract="true" name="AbstractList" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier106" isRoot="false" isLeaf="false" isAbstract="true" name="RandomAccess" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier107"></UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier110" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier111 xldb03bmartinsNGramClassifier112 xldb03bmartinsNGramClassifier113 xldb03bmartinsNGramClassifier114 xldb03bmartinsNGramClassifier115" name="ArrayList" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier134" isRoot="false" isLeaf="false" isAbstract="true" name="Iterator" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier135"></UML:Interface>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier191" isRoot="false" isLeaf="false" isAbstract="true" name="Map" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier192"></UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier230" isRoot="false" isLeaf="false" isAbstract="true" name="AbstractMap" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier231" isRoot="false" isLeaf="false" isAbstract="false" generalization="xldb03bmartinsNGramClassifier232 xldb03bmartinsNGramClassifier233 xldb03bmartinsNGramClassifier234 xldb03bmartinsNGramClassifier235" name="HashMap" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+      </UML:Namespace.ownedElement>
+    </UML:Package>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier177" isSpecification="false" child="xldb03bmartinsNGramClassifier176" parent="xldb03bmartinsNGramClassifier175"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier178" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier179" client="xldb03bmartinsNGramClassifier163" supplier="xldb03bmartinsNGramClassifier176"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier179" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier180" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier181" client="xldb03bmartinsNGramClassifier163" supplier="xldb03bmartinsNGramClassifier83"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier181" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier183" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier185" isSpecification="false" child="xldb03bmartinsNGramClassifier184" parent="xldb03bmartinsNGramClassifier182"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier186" isSpecification="false" child="xldb03bmartinsNGramClassifier184" parent="xldb03bmartinsNGramClassifier101"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier187" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier188" client="xldb03bmartinsNGramClassifier163" supplier="xldb03bmartinsNGramClassifier184"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier188" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier19" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier192" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier2" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier22" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier222" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier223" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier134"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier223" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier224" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier225" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier82"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier225" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier226" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier227" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier36"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier227" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier228" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier229" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier191"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier229" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier232" isSpecification="false" child="xldb03bmartinsNGramClassifier231" parent="xldb03bmartinsNGramClassifier230"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier233" isSpecification="false" child="xldb03bmartinsNGramClassifier231" parent="xldb03bmartinsNGramClassifier191"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier234" isSpecification="false" child="xldb03bmartinsNGramClassifier231" parent="xldb03bmartinsNGramClassifier108"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier235" isSpecification="false" child="xldb03bmartinsNGramClassifier231" parent="xldb03bmartinsNGramClassifier88"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier236" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier237" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier231"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier237" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier238" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier239" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier83"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier239" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier240" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier241" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier184"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier241" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier242" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier243" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier101"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier243" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier246" isSpecification="false" child="xldb03bmartinsNGramClassifier245" parent="xldb03bmartinsNGramClassifier244"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier247" isSpecification="false" child="xldb03bmartinsNGramClassifier245" parent="xldb03bmartinsNGramClassifier182"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier248" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier249 xldb03bmartinsNGramClassifier250" client="xldb03bmartinsNGramClassifier65" supplier="xldb03bmartinsNGramClassifier245"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier249" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier25" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier250" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier255" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier256" client="xldb03bmartinsNGramClassifier24" supplier="xldb03bmartinsNGramClassifier101"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier256" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier260" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier261" client="xldb03bmartinsNGramClassifier21" supplier="xldb03bmartinsNGramClassifier134"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier261" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier263" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier279" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier280" client="xldb03bmartinsNGramClassifier101" supplier="xldb03bmartinsNGramClassifier272"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier280" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier281" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier282" client="xldb03bmartinsNGramClassifier101" supplier="xldb03bmartinsNGramClassifier36"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier282" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier287" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier29" isRoot="false" isLeaf="false" isAbstract="false" name="String[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier299" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier327" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier328 xldb03bmartinsNGramClassifier329" client="xldb03bmartinsNGramClassifier184" supplier="xldb03bmartinsNGramClassifier101"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier328" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier329" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier330" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier331" client="xldb03bmartinsNGramClassifier184" supplier="xldb03bmartinsNGramClassifier272"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier331" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier332" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier333" client="xldb03bmartinsNGramClassifier184" supplier="xldb03bmartinsNGramClassifier92"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier333" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier334" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier335" client="xldb03bmartinsNGramClassifier184" supplier="xldb03bmartinsNGramClassifier36"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier335" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Package xmi.id="xldb03bmartinsNGramClassifier35" isRoot="false" isLeaf="false" isAbstract="false" name="java.lang" isSpecification="false">
+      <UML:Namespace.ownedElement>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier36" isRoot="false" isLeaf="true" isAbstract="false" name="String" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier58" isRoot="false" isLeaf="false" isAbstract="false" name="Exception" visibility="public" isSpecification="false" clientDependency="xldb03bmartinsNGramClassifier505 xldb03bmartinsNGramClassifier507" isActive="false">
+          <UML:Namespace.ownedElement>
+            <UML:Attribute xmi.id="xldb03bmartinsNGramClassifier490" ownerScope="classifier" name="serialVersionUID" visibility="package" isSpecification="false" changeability="frozen" ordering="unordered" type="long"></UML:Attribute>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier491" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="Exception" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier492" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier493" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="Exception" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier494" kind="in" type="xldb03bmartinsNGramClassifier36" name="message" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier495" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier496" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="Exception" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier498" kind="in" type="xldb03bmartinsNGramClassifier497" name="cause" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier499" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier500" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="false" isQuery="false" name="Exception" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier501" kind="in" type="xldb03bmartinsNGramClassifier36" name="message" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier502" kind="in" type="xldb03bmartinsNGramClassifier497" name="cause" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier503" kind="return" type="void" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier504" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier87" isRoot="false" isLeaf="false" isAbstract="false" name="Object" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier90" isRoot="false" isLeaf="false" isAbstract="true" name="CharSequence" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier91"></UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier92" isRoot="false" isLeaf="true" isAbstract="false" generalization="xldb03bmartinsNGramClassifier93 xldb03bmartinsNGramClassifier94 xldb03bmartinsNGramClassifier95" name="StringBuffer" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier108" isRoot="false" isLeaf="false" isAbstract="true" name="Cloneable" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier109"></UML:Interface>
+        <UML:Interface xmi.id="xldb03bmartinsNGramClassifier182" isRoot="false" isLeaf="false" isAbstract="true" name="Comparable" visibility="public" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier183">
+          <UML:Namespace.ownedElement>
+            <UML:Operation xmi.id="xldb03bmartinsNGramClassifier486" ownerScope="instance" concurrency="concurrent" isRoot="false" isLeaf="false" isAbstract="true" isQuery="false" name="compareTo" visibility="public" isSpecification="false">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier487" kind="in" type="xldb03bmartinsNGramClassifier87" name="o" isSpecification="false"></UML:Parameter>
+                <UML:Parameter xmi.id="xldb03bmartinsNGramClassifier488" kind="return" type="int" isSpecification="false"></UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Namespace.ownedElement>
+          <UML:ModelElement.taggedValue>
+            <UML:TaggedValue xmi.id="xldb03bmartinsNGramClassifier489" name="isDefined" isSpecification="false">
+              <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+            </UML:TaggedValue>
+          </UML:ModelElement.taggedValue>
+        </UML:Interface>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier244" isRoot="false" isLeaf="false" isAbstract="true" name="Number" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier245" isRoot="false" isLeaf="true" isAbstract="false" generalization="xldb03bmartinsNGramClassifier246 xldb03bmartinsNGramClassifier247" name="Double" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+        <UML:Class xmi.id="xldb03bmartinsNGramClassifier497" isRoot="false" isLeaf="false" isAbstract="false" name="Throwable" visibility="public" isSpecification="false" isActive="false"></UML:Class>
+      </UML:Namespace.ownedElement>
+    </UML:Package>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier355" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier363" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier368" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier376" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier385" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier40" isRoot="false" isLeaf="false" isAbstract="false" name="String[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier407" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier408 xldb03bmartinsNGramClassifier409" client="xldb03bmartinsNGramClassifier272" supplier="xldb03bmartinsNGramClassifier101"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier408" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier409" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier410" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier411" client="xldb03bmartinsNGramClassifier272" supplier="xldb03bmartinsNGramClassifier92"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier411" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier412" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier413" client="xldb03bmartinsNGramClassifier272" supplier="xldb03bmartinsNGramClassifier36"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier413" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier414" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier415" client="xldb03bmartinsNGramClassifier272" supplier="xldb03bmartinsNGramClassifier184"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier415" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier417" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier425" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier426" client="xldb03bmartinsNGramClassifier416" supplier="xldb03bmartinsNGramClassifier24"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier426" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier427" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier428" client="xldb03bmartinsNGramClassifier416" supplier="xldb03bmartinsNGramClassifier21"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier428" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier436" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier437" client="xldb03bmartinsNGramClassifier59" supplier="xldb03bmartinsNGramClassifier92"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier437" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier438" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier439" client="xldb03bmartinsNGramClassifier59" supplier="xldb03bmartinsNGramClassifier36"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier439" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier447" isRoot="false" isLeaf="false" isAbstract="false" name="byte[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier458" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier459" client="xldb03bmartinsNGramClassifier440" supplier="xldb03bmartinsNGramClassifier231"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier459" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier460" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier461" client="xldb03bmartinsNGramClassifier440" supplier="xldb03bmartinsNGramClassifier191"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier461" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier462" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier463" client="xldb03bmartinsNGramClassifier440" supplier="xldb03bmartinsNGramClassifier110"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier463" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier464" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier465" client="xldb03bmartinsNGramClassifier440" supplier="xldb03bmartinsNGramClassifier82"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier465" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier466" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier467" client="xldb03bmartinsNGramClassifier440" supplier="xldb03bmartinsNGramClassifier18"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier467" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier468" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier469 xldb03bmartinsNGramClassifier470" client="xldb03bmartinsNGramClassifier440" supplier="xldb03bmartinsNGramClassifier184"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier469" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier470" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier471" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier472" client="xldb03bmartinsNGramClassifier440" supplier="xldb03bmartinsNGramClassifier159"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier472" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier473" isSpecification="false" child="xldb03bmartinsNGramClassifier10" parent="xldb03bmartinsNGramClassifier416"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier474" isSpecification="false" child="xldb03bmartinsNGramClassifier10" parent="xldb03bmartinsNGramClassifier1"></UML:Generalization>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier476" isRoot="false" isLeaf="false" isAbstract="false" name="String[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier480" isRoot="false" isLeaf="false" isAbstract="false" name="String[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier483" isRoot="false" isLeaf="false" isAbstract="false" name="String[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Class xmi.id="xldb03bmartinsNGramClassifier49" isRoot="false" isLeaf="false" isAbstract="false" name="String[]" isSpecification="false" isActive="false"></UML:Class>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier505" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier506" client="xldb03bmartinsNGramClassifier58" supplier="xldb03bmartinsNGramClassifier36"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier506" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier507" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier508" client="xldb03bmartinsNGramClassifier58" supplier="xldb03bmartinsNGramClassifier497"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier508" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier56" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier57" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier18"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier57" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier60" isSpecification="false" child="xldb03bmartinsNGramClassifier59" parent="xldb03bmartinsNGramClassifier58"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier61" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier62" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier59"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier62" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier64" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier66" isSpecification="false" child="xldb03bmartinsNGramClassifier65" parent="xldb03bmartinsNGramClassifier21"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier67" isSpecification="false" child="xldb03bmartinsNGramClassifier65" parent="xldb03bmartinsNGramClassifier63"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier68" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier69" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier65"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier69" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier70" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier71" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier36"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier71" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier72" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier73" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier13"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier73" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier75" isSpecification="false" child="xldb03bmartinsNGramClassifier74" parent="xldb03bmartinsNGramClassifier1"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier76" isSpecification="false" child="xldb03bmartinsNGramClassifier74" parent="xldb03bmartinsNGramClassifier21"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier77" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier78" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier74"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier78" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier79" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier80 xldb03bmartinsNGramClassifier81" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier21"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier80" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier81" isRoot="false" isLeaf="false" isAbstract="false" name="use" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier84" isSpecification="false" child="xldb03bmartinsNGramClassifier83" parent="xldb03bmartinsNGramClassifier82"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier85" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier86" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier83"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier86" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier89" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier91" isRoot="false" isLeaf="false" isAbstract="false" name="interface" isSpecification="false"></UML:Stereotype>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier93" isSpecification="false" child="xldb03bmartinsNGramClassifier92" parent="xldb03bmartinsNGramClassifier87"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier94" isSpecification="false" child="xldb03bmartinsNGramClassifier92" parent="xldb03bmartinsNGramClassifier88"></UML:Generalization>
+    <UML:Generalization xmi.id="xldb03bmartinsNGramClassifier95" isSpecification="false" child="xldb03bmartinsNGramClassifier92" parent="xldb03bmartinsNGramClassifier90"></UML:Generalization>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier96" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier97" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier92"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier97" isRoot="false" isLeaf="false" isAbstract="false" name="create" isSpecification="false"></UML:Stereotype>
+    <UML:Dependency xmi.id="xldb03bmartinsNGramClassifier98" isSpecification="false" stereotype="xldb03bmartinsNGramClassifier99 xldb03bmartinsNGramClassifier100" client="xldb03bmartinsNGramClassifier10" supplier="xldb03bmartinsNGramClassifier47"></UML:Dependency>
+    <UML:Stereotype xmi.id="xldb03bmartinsNGramClassifier99" isRoot="false" isLeaf="false" isAbstract="false" name="access" isSpecification="false"></UML:Stereotype>
+  </XMI.content>
+</XMI>
+

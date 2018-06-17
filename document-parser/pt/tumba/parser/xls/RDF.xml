@@ -1,0 +1,1643 @@
+<?xml version='1.0' ?>
+<r:RDF xmlns:r='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+	xmlns:d='http://purl.org/dc/elements/1.1/' xmlns:s='http://www.w3.org/2000/01/rdf-schema#'
+	xmlns:h='http://www.w3.org/1999/xx/http#' xmlns:t='http://purl.org/dc/terms/'>
+	<r:Description r:about="">
+		<d:Title>Text Classification &amp;Sentiment Analysis tutorial / blog -
+			Data Science Central</d:Title>
+		<t:abstract>
+			<r:Alt>
+				<r:li r:ID='DocumentAbstract'>We all know that with Machine Learning you can
+					automatically classify text documents or analyze its subjectivity.
+					We've just released a guide that gives a brieâ?¦</r:li>
+				<r:li r:ID='DocumentKeywords'></r:li>
+			</r:Alt>
+		</t:abstract>
+		<d:Language>unknown</d:Language>
+		<d:Type>text/html</d:Type>
+		<d:Relation>
+			<r:Alt>
+				<r:li r:ID='LinkRSS'>http://feeds.feedburner.com/AnnouncementsDiscussions-DataScienceCentral
+				</r:li>
+			</r:Alt>
+		</d:Relation>
+		<t:references>
+			<r:Alt>
+				<r:li r:ID="#DocumentLinks">
+					<r:Bag>
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:621079"
+							r:label="Unveiling Anaconda Enterprise 5" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529%3ABlogPost%3A354950"
+							r:label="Top 6 Data Modeling Tools" />
+						<r:li r:resource="http://https/class.coursera.org/nlp/lecture/37"
+							r:label=" NLP course" />
+						<r:li r:resource="http://www.datasciencecentral.com/video/video"
+							r:label="View All" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529%3ABlogPost%3A440317"
+							r:label="How to Analyze Big Data with Excel" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/page/search?q=visualization"
+							r:label="Visualization, Dashboards" />
+						<r:li r:resource="http:/page/search?q=deep+learning" />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/Hyperplane"
+							r:label=" hyperplaneÂ " />
+						<r:li
+							r:resource="http://www.facebook.com/share.php?amp;t=Text%20Classification%20%26%20Sentiment%20Analysis%20tutorial%20%2F%20blog%20on%20Data%20Science%20Central&amp;u=http%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Ftext-classification-sentiment-analysis-tutorial-blog%3Fxg_source%3Dfacebook"
+							r:label="Facebook" />
+						<r:li r:resource="http://www.datasciencecentral.com/page/search?q=Python"
+							r:label="Python for Data Science" />
+						<r:li r:resource="http:/page/search" />
+						<r:li r:resource="http://https/twitter.com/share" r:label="Tweet" />
+						<r:li r:resource="http://www.wjh.harvard.edu/~inquirer/homecat.htm"
+							r:label="Harvard Inquirer" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/page/search?q=cheat+sheets"
+							r:label="Cheat Sheets" />
+						<r:li
+							r:resource="http://https/ataspinar.wordpress.com/2015/11/16/text-classification-and-sentiment-analysis/"
+							r:label="Move to top" />
+						<r:li r:resource="http://www.datasciencecentral.com/page/search?q=R"
+							r:label="R Programming" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/main/authorization/signUp?target=http%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Ftext-classification-sentiment-analysis-tutorial-blog"
+							r:label="Sign Up" />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/Posterior_probability"
+							r:label=" posterior probability" />
+						<r:li
+							r:resource="http://biblio.telecom-paristech.fr/cgi-bin/download.cgi?id=6694"
+							r:label=" this" />
+						<r:li
+							r:resource="http://https/www.cs.cornell.edu/home/llee/papers/sentiment.home.html"
+							r:label=" article" />
+						<r:li
+							r:resource="http://https/datasciencecentral.networkauth.com/twitter/start?token_url=http%3A%2F%2Fwww.datasciencecentral.com%2Fmain%2Fauthorization%2FprocessExternalAuth%3Ftarget%3Dhttp%253A%252F%252Fwww.datasciencecentral.com%252Fprofiles%252Fblogs%252Ftext-classification-sentiment-analysis-tutorial-blog%26source%3DsignUp%26close%3D0%26provider%3Dtwitter" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/main/authorization/signUp?target=http%3A%2F%2Fwww.datasciencecentral.com%2Fmain%2Findex%2Freport"
+							r:label="Report an Issue" />
+						<r:li
+							r:resource="http://www.cs.cmu.edu/afs/cs/user/aberger/www/html/tutorial/node7.html"
+							r:label=" shownÂ " />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/Bag-of-words_model"
+							r:label=" bag-of-words" />
+						<r:li
+							r:resource="http://https/datasciencecentral.networkauth.com/facebook/connect_start?amp;token_url=http%3A%2F%2Fwww.datasciencecentral.com%2Fmain%2Fauthorization%2FprocessExternalAuth%3Ftarget%3Dhttp%253A%252F%252Fwww.datasciencecentral.com%252Fprofiles%252Fblogs%252Ftext-classification-sentiment-analysis-tutorial-blog%26source%3DsignUp%26close%3D0%26provider%3Dfacebook&amp;ext_perm=user_birthday%2Cuser_location%2Cemail" />
+						<r:li r:resource="http://www.datasciencecentral.com/profiles/blog/list?my=1"
+							r:label="My Blog" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:623251"
+							r:label="Moving from BI to Automated Machine Learning" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/profiles/blog/list?user=0cqadyjtpv6kx"
+							r:label="View Blog" />
+						<r:li r:resource="http:/page/search?q=ai" />
+						<r:li r:resource="http://nlp.stanford.edu/sentiment/"
+							r:label=" website" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/video/predictive-analytics-for-supply-chain-management"
+							r:label="3 Likes " />
+						<r:li r:resource="http://www.datasciencecentral.com/page/search?q=excel"
+							r:label="Excel" />
+						<r:li
+							r:resource="http://en.etsmtl.ca/ETS/media/ImagesETS/Labo/LIVIA/Publications/2006/MILGRAM_IWFHR_2006.pdf"
+							r:label=" one-vs-one and one-vs-all" />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/Normal_(geometry)"
+							r:label=" normalÂ " />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:620528"
+							r:label="Deadline Approaching - Earn Your M.S. in Data Science Online" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:620125"
+							r:label="The Future of Data is Here &amp;ndash; See you in December" />
+						<r:li r:resource="http:/profile/LeoLi" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/main/authorization/signIn?target=http%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Ftext-classification-sentiment-analysis-tutorial-blog"
+							r:label="Sign In" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/page/search?q=machine+learning"
+							r:label="Machine Learning" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/leaderboards/topcontent/week?amp;imageMaxSize=240&amp;amp;images=yes&amp;amp;n=20&amp;amp;xn_auth=no&amp;feed=yes"
+							r:label="RSS" />
+						<r:li r:resource="http:/profiles/blogs/my-data-science-book" />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/F1_score"
+							r:label=" F-score" />
+						<r:li r:resource="http://https/www.classifieds.datasciencecentral.com/"
+							r:label="Classifieds " />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/Gradient_descent"
+							r:label=" gradient descent" />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/Indicator_function"
+							r:label=" indicator function" />
+						<r:li
+							r:resource="http://www.amazon.com/Sentiment-Analysis-Opinions-Sentiments-Emotions/dp/1107017890/ref=sr_1_1?amp;qid=1447859848&amp;amp;sr=8-1&amp;ie=UTF8"
+							r:label=" Sentiment Analysis" />
+						<r:li r:resource="http://sentiwordnet.isti.cnr.it/" r:label="SentiWordNet" />
+						<r:li r:resource="http:/video/video/listFeatured" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:620198"
+							r:label="Machine Learning Automation - Use Case" />
+						<r:li
+							r:resource="http://repository.upenn.edu/cgi/viewcontent.cgi?amp;context=ircs_reports&amp;article=1083"
+							r:label=" A simple introduction to Maximum Entropy models" />
+						<r:li r:resource="http:/page/contact-us" />
+						<r:li r:resource="http://www.kamalnigam.com/papers/maxent-ijcaiws99.pdf"
+							r:label="Using Maximum Entropy for text classification" />
+						<r:li r:resource="http:/page/editorial-guidelines" />
+						<r:li r:resource="http://www.datasciencecentral.com/profile/2edcolrgc4o4b"
+							r:label="Tim Matteson" />
+						<r:li r:resource="http://www.datasciencecentral.com/profile/LeoLi" />
+						<r:li r:resource="http://provalisresearch.com/Download/WSD.zip"
+							r:label="WordStat sentiment Dictionary" />
+						<r:li r:resource="http://https/twitter.com/DataScienceCtrl"
+							r:label="@DataScienceCtrl " />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/main/sharing/share?id=6448529%253ABlogPost%253A372282"
+							r:label="Share" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/leaderboards/topcontent/week"
+							r:label="View All" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/video/real-time-analytics-for-iot-with-apache-edgent-and-ibm-streams"
+							r:label="0 Likes " />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/Linear_separability"
+							r:label=" linearly separable" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529%3ABlogPost%3A616859"
+							r:label="The Slow Decline of Google Search" />
+						<r:li r:resource="http://www.bigdatanews.datasciencecentral.com/"
+							r:label="Big Data " />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:623074"
+							r:label="Agile Data Mastering With Dr. Michael Stonebraker" />
+						<r:li r:resource="http://www.datasciencecentral.com/profiles/blog/rsd"
+							r:label="EditURI;RSD" />
+						<r:li r:resource="http://www.analyticbridge.com/page/links"
+							r:label="Top Links " />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;amp;bg=ffffff&amp;amp;amp;fg=111111&amp;amp;amp;s=0&amp;latex=D"
+							r:label="image_src" />
+						<r:li r:resource="http://https/www.ning.com/"
+							r:label=" Website builder | Create website | Ning.com " />
+						<r:li r:resource="http://https/class.coursera.org/nlp/lecture/126"
+							r:label="Word Normalization" />
+						<r:li
+							r:resource="http://people.few.eur.nl/hogenboom/files/EmoticonSentimentLexicon.zip"
+							r:label=" Emoticon Sentiment Lexicon" />
+						<r:li r:resource="http://www.datasciencecentral.com/page/search?q=nosql"
+							r:label="NoSQL and NewSQL" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/profiles/comment/feed?amp;xn_auth=no&amp;attachedTo=6448529%3ABlogPost%3A372282"
+							r:label="RSS" />
+						<r:li
+							r:resource="http://https/www.quora.com/What-is-an-intuitive-explanation-of-the-concept-of-entropy-in-information-theory"
+							r:label=" Entropy" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:622921"
+							r:label="Maximize the ROI of any Big Data Investment" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/main/authorization/termsOfService?previousUrl=http%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Ftext-classification-sentiment-analysis-tutorial-blog"
+							r:label="Terms of Service" />
+						<r:li
+							r:resource="http://feeds.feedburner.com/AnnouncementsDiscussions-DataScienceCentral"
+							r:label="alternate;Announcements - Data Science Central" />
+						<r:li
+							r:resource="http://www.cse.iitb.ac.in/~pb/cs626-449-2009/prev-years-other-things-nlp/sentiment-analysis-opinion-mining-pang-lee-omsa-published.pdf"
+							r:label=" articleÂ " />
+						<r:li r:resource="http:/favicon.ico" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:620508"
+							r:label="Boost Your Business Intelligence" />
+						<r:li r:resource="http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html"
+							r:label="Bing Liuâ??s opinion lexicon" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/video/video/chooseUploader"
+							r:label="Add Videos" />
+						<r:li r:resource="http://www.datavizualization.datasciencecentral.com/"
+							r:label="DataViz " />
+						<r:li r:resource="http:/page/previous-digests" />
+						<r:li
+							r:resource="http://www.amazon.com/Web-Data-Mining-Data-Centric-Applications/dp/3642194591/ref=sr_1_3?amp;ie=UTF8&amp;amp;qid=1302988351&amp;amp;sr=1-3&amp;s=books"
+							r:label=" Web Data Mining" />
+						<r:li
+							r:resource="http://https/datasciencecentral.networkauth.com/googleplus/start?token_url=http%3A%2F%2Fwww.datasciencecentral.com%2Fmain%2Fauthorization%2FprocessExternalAuth%3Ftarget%3Dhttp%253A%252F%252Fwww.datasciencecentral.com%252Fprofiles%252Fblogs%252Ftext-classification-sentiment-analysis-tutorial-blog%26source%3DsignUp%26close%3D0%26provider%3Dgoogle" />
+						<r:li r:resource="http://www.datasciencecentral.com/main/embeddable/list"
+							r:label="Badges" />
+						<r:li r:resource="http://www3.nd.edu/~mcdonald/Word_Lists.html"
+							r:label="Bill McDonalds" />
+						<r:li
+							r:resource="http://sebastianraschka.com/Articles/2014_naive_bayes_1.html"
+							r:label=" blog-post" />
+						<r:li r:resource="http:/" />
+						<r:li r:resource="http://https/en.wikipedia.org/wiki/Reading_path"
+							r:label=" non-linear datasets" />
+						<r:li r:resource="http://www.datasciencecentral.com/page/news-feeds"
+							r:label="RSS Feeds" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/profiles/blogs/sentiment-analysis-with-the-bag-of-words"
+							r:label="Next Post &gt;" />
+						<r:li r:resource="http:/profile/AhmetTaspinar" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529%3ABlogPost%3A622828"
+							r:label="AI&amp;rsquo;s Ethical Dilemma &amp;ndash; An Unexpectedly Urgent Problem" />
+						<r:li r:resource="http://www.analytictalent.datasciencecentral.com/"
+							r:label="Jobs " />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529%3ABlogPost%3A619941"
+							r:label="Tensorflow Tutorial : Part 1 &amp;ndash; Introduction" />
+						<r:li r:resource="http://https/www.coursera.org/course/nlp"
+							r:label=" Natural Language Processing" />
+						<r:li
+							r:resource="http://stackoverflow.com/questions/4188706/sentiment-analysis-dictionaries"
+							r:label=" stackoverflow" />
+						<r:li
+							r:resource="http://https/datasciencecentral.networkauth.com/openid/start?amp;token_url=http%3A%2F%2Fwww.datasciencecentral.com%2Fmain%2Fauthorization%2FprocessExternalAuth%3Ftarget%3Dhttp%253A%252F%252Fwww.datasciencecentral.com%252Fprofiles%252Fblogs%252Ftext-classification-sentiment-analysis-tutorial-blog%26source%3DsignUp%26close%3D0%26provider%3Dyahoo&amp;openid_identifier=http%3A%2F%2Fme.yahoo.com%2F" />
+						<r:li r:resource="http://www.socher.org/index.php/Main/HomePage"
+							r:label=" Socher" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/profiles/blog/feed?amp;xn_auth=no&amp;user=0cqadyjtpv6kx"
+							r:label="alternate;Ahmet Taspinar&amp;#039;s Posts - Data Science Central" />
+						<r:li
+							r:resource="http://nparc.cisti-icist.nrc-cnrc.gc.ca/npsi/ctrl?action=rtdoc&amp;amp;an=8914166"
+							r:label=" article" />
+						<r:li r:resource="http://www.datasciencecentral.com/profiles/blog/list"
+							r:label="All Blog Posts" />
+						<r:li
+							r:resource="http://https/www.kaggle.com/c/sentiment-analysis-on-movie-reviews"
+							r:label=" kaggle competition" />
+						<r:li r:resource="http:/page/user-agreement" />
+						<r:li r:resource="http://www.datasciencecentral.com/profile/AhmetTaspinar" />
+						<r:li r:resource="http://mpqa.cs.pitt.edu/" r:label="MPQA" />
+						<r:li r:resource="http://www.datasciencecentral.com/main/search/search" />
+						<r:li
+							r:resource="http://www.cs.cmu.edu/afs/cs/user/aberger/www/html/tutorial/tutorial.html"
+							r:label=" A brief MaxEnt tutorial" />
+						<r:li r:resource="http:/profiles/blogs/check-out-our-dsc-newsletter" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/main/authorization/privacyPolicy?previousUrl=http%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Ftext-classification-sentiment-analysis-tutorial-blog"
+							r:label="Privacy Policy" />
+						<r:li
+							r:resource="http://https/en.wikipedia.org/wiki/Tokenization_(lexical_analysis)"
+							r:label="TokenizationÂ " />
+						<r:li
+							r:resource="http://crsouza.com/2010/03/kernel-functions-for-machine-learning-applications/"
+							r:label=" Here" />
+						<r:li
+							r:resource="http://www.cs.cmu.edu/afs/cs/user/aberger/www/html/tutorial/node2.html"
+							r:label=" this" />
+						<r:li
+							r:resource="http://https/en.wikipedia.org/wiki/Conditional_independence"
+							r:label=" conditional independence" />
+						<r:li r:resource="http://www.datasciencecentral.com/profiles/blog/new"
+							r:label="Add" />
+						<r:li r:resource="http://https/www.youtube.com/watch?v=3liCbRZPrZA"
+							r:label=" This" />
+						<r:li r:resource="http://www.datasciencecentral.com/page/search?q=iot"
+							r:label="Internet of Things" />
+						<r:li r:resource="http://https/www.cs.cmu.edu/~tom/mlbook/NBayesLogReg.pdf"
+							r:label="Machine Learning" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:624117"
+							r:label="Data Science Models &amp;Tools at Open Data Science Conference" />
+						<r:li r:resource="http://https/www.youtube.com/watch?v=YsiWisFFruY"
+							r:label=" youtube video" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529:Topic:620794"
+							r:label="Join data scientists from around the globe October 9-12" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/profiles/blogs/check-out-our-dsc-newsletter"
+							r:label="Subscribe to DSC Newsletter" />
+						<r:li
+							r:resource="http://www.amazon.com/Foundations-Statistical-Natural-Language-Processing/dp/0262133601/ref=sr_1_1?amp;qid=1449484468&amp;amp;sr=8-1&amp;ie=UTF8"
+							r:label="Foundations of Statistical Natural Language Processing" />
+						<r:li r:resource="http://www.datasciencecentral.com/page/search?q=big+data"
+							r:label="Big Data" />
+						<r:li r:resource="http://thequietplaceproject.com/" r:label=" inside a link" />
+						<r:li r:resource="http://www.amazon.com/dp/026201825X"
+							r:label="Foundations of Machine Learning" />
+						<r:li
+							r:resource="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.datasciencecentral.com%2Fvideo%2Fvideo%3Ffrom%3Dfb"
+							r:label="Facebook " />
+						<r:li r:resource="http://www.hadoop360.datasciencecentral.com/"
+							r:label="Hadoop " />
+						<r:li
+							r:resource="http://https/cdn.datasciencecentral.com/css/style020170126141034-6-7.css"
+							r:label="stylesheet" />
+						<r:li r:resource="http://www.analyticbridge.datasciencecentral.com/"
+							r:label="Analytics " />
+						<r:li
+							r:resource="http://nlp.stanford.edu/IR-book/html/htmledition/naive-bayes-text-classification-1.html"
+							r:label=" IR-book" />
+						<r:li r:resource="http://www.amazon.com/dp/0262018020"
+							r:label="Machine Learning: A probabilistic perspective" />
+						<r:li r:resource="http://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf"
+							r:label=" thisÂ " />
+						<r:li r:resource="http://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf"
+							r:label=" paper" />
+						<r:li
+							r:resource="http://www-mtl.mit.edu/Courses/6.050/2003/notes/chapter10.pdf"
+							r:label=" another good MIT article" />
+						<r:li
+							r:resource="http://www.datasciencecentral.com/xn/detail/6448529%3ATopic%3A191446"
+							r:label="16 analytic disciplines compared to data science" />
+						<r:li
+							r:resource="http://https/datasciencecentral.networkauth.com/linkedin/start?token_url=http%3A%2F%2Fwww.datasciencecentral.com%2Fmain%2Fauthorization%2FprocessExternalAuth%3Ftarget%3Dhttp%253A%252F%252Fwww.datasciencecentral.com%252Fprofiles%252Fblogs%252Ftext-classification-sentiment-analysis-tutorial-blog%26source%3DsignUp%26close%3D0%26provider%3Dlinkedin" />
+					</r:Bag>
+				</r:li>
+				<r:li r:ID="#DocumentImages">
+					<r:Bag>
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=C"
+							r:label="C" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=D"
+							r:label="D" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C%7CD%29"
+							r:label="P(C|D)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=C_%7BNB%7D+%3D+argmax+P%28D%7CC%29+%5Ccdot+P%28C%29"
+							r:label="C_{NB} = argmax P(D|C) &apos;cdot P(C)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=H%28p%29+%3D+-+%5Csum+p%28a%2Cb%29+log+p%28a%2Cb%29"
+							r:label="H(p) = - &apos;sum p(a,b) log p(a,b)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=C_%7BNB%7D+%3D+argmax+P%28C%29+%5Ccdot+%5Cprod_i+P%28d_i%7CC%29"
+							r:label="C_{NB} = argmax P(C) &apos;cdot &apos;prod_i P(d_i|C)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Calpha_i"
+							r:label="&apos;alpha_i" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28c%7Cd%29+%3D+%5Cfrac%7B1%7D%7BZ%28d%29%7D+exp+%28+%5Csum_i+%5Clambda_i+f_i%28d%2Cc%29%29"
+							r:label="P(c|d) = &apos;frac{1}{Z(d)} exp ( &apos;sum_i &apos;lambda_i f_i(d,c))" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=c+%5Cneq+c%27+"
+							r:label="c &apos;neq c' " />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Cvec%7Bx_i%7D+%3D+%28x_%7Bi1%7D%2C+x_%7Bi2%7D%2C+..+%2C+x_%7Bin%7D+%29"
+							r:label="&apos;vec{x_i} = (x_{i1}, x_{i2}, .. , x_{in} )" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C_%7Bneu%7D+%3D+0.723+%5Ccdot+500+%2F+1230+%5Ccdot+90+%2F+1230+%5Ccdot+600+%2F+1230+%5Ccdot+20+%2F+1230+%3D+1.71+%5Ccdot+10%5E%7B-4%7D"
+							r:label="P(C_{neu} = 0.723 &apos;cdot 500 / 1230 &apos;cdot 90 / 1230 &apos;cdot 600 / 1230 &apos;cdot 20 / 1230 = 1.71 &apos;cdot 10^{-4}" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=f%5E%7B%5C%23%7D%28d%2Cc%29"
+							r:label="f^{&apos;#}(d,c)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Cvec%7Bw%7D+%3D+%28w_1%2C+w_2%2C+..+%2C+w_n+%29+"
+							r:label="&apos;vec{w} = (w_1, w_2, .. , w_n ) " />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C%3Dc_i%7CD%29+%3D+P%28D%7CC%3Dc_i%29+%5Ccdot+P%28C%3Dc_i%29+"
+							r:label="P(C=c_i|D) = P(D|C=c_i) &apos;cdot P(C=c_i) " />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C_%7Bneu%7D%29+%3D+0.723"
+							r:label="P(C_{neu}) = 0.723" />
+						<r:li
+							r:resource="http://api.ning.com/files/3ydo-rPuK9pUkGJI4o7qRO2DePDlKONwIEXOgGqXjo8TgXCs8h9hZQfhGM6k8u1xepXY3HfAsl4G1husOTrfN1*h1BarMyWk/1142160637.jpeg?amp;crop=1%3A1&amp;amp;height=32&amp;amp;width=32&amp;xgip=25%3A4%3A183%3A183%3B%3B"
+							r:label="Top 6 Data Modeling Tools" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Cvec%7Bw%7D"
+							r:label="&apos;vec{w}" />
+						<r:li
+							r:resource="http:/t.insigit.com/457c26e9bfb940b938245ed4695cead2/8fa427bf6de170faefe32330e3b4b102?n_name=DataScienceCentral&amp;n_seg=_technology" />
+						<r:li
+							r:resource="http://api.ning.com/files/0A1mEG0sKPWjMqJf4z6fFy1OBR5wbI4pBUrsFSkzQQohlxGZG1CWnKgjS40GjqQ8*-B2D8fV1bbTLyBNchyxkfDHb7lbTIFh/1206399868.png?amp;crop=1%3A1&amp;amp;height=32&amp;amp;width=32&amp;xgip=0%3A17%3A185%3A185%3B%3B"
+							r:label="16 analytic disciplines compared to data science" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=+f_%7Bw%2Cc%27%7D%28d%2Cc%29+%3D+%5Cfrac%7Bcount%28d%2Cw%29%7D%7Bcount%28d%29%7D"
+							r:label=" f_{w,c'}(d,c) = &apos;frac{count(d,w)}{count(d)}" />
+						<r:li
+							r:resource="http://https/ataspinar.files.wordpress.com/2015/11/svm_max_sep_hyperplane_with_margin.png?amp;h=300&amp;w=278"
+							r:label="svm_max_sep_hyperplane_with_margin" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C_%7Bneg%7D%29+%3D+0.141+%5Ccdot+50+%2F+240+%5Ccdot+10+%2F+240+%5Ccdot+100+%2F+240+%5Ccdot+10+%2F+240+%3D+2.12+%5Ccdot+10%5E%7B-4%7D"
+							r:label="P(C_{neg}) = 0.141 &apos;cdot 50 / 240 &apos;cdot 10 / 240 &apos;cdot 100 / 240 &apos;cdot 10 / 240 = 2.12 &apos;cdot 10^{-4}" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=Z%28d%29+%3D+%5Csum_c+exp+%28+%5Csum_i+%5Clambda_i+f_i%28d%2Cc%29+%29+"
+							r:label="Z(d) = &apos;sum_c exp ( &apos;sum_i &apos;lambda_i f_i(d,c) ) " />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=f_i%28d%2Cc%29"
+							r:label="f_i(d,c)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Cvec%7Bx_i%7D"
+							r:label="&apos;vec{x_i}" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=D+%3D+%28+d_1%2C+d_2%2C+..%2C+d_n+%29+"
+							r:label="D = ( d_1, d_2, .., d_n ) " />
+						<r:li
+							r:resource="http://api.ning.com/files/hA00SIFl6AUflCGPdJTpk3ReaCqTDqIVF4QwKVgSRfrPNpt0ZV0kX5CaJZrWiaeMqSEy8-I8q9GcaE0HjN5sXgD7mrf5nT8s/1155035725.jpeg?amp;crop=1%3A1&amp;amp;height=48&amp;width=48" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28d_i+%7C+C%29+%3D+%5Cfrac%7Bcount%28d_i%2C+C%29%7D%7B%5Csum_i+count%28d_i%2C+C%29%7D"
+							r:label="P(d_i | C) = &apos;frac{count(d_i, C)}{&apos;sum_i count(d_i, C)}" />
+						<r:li
+							r:resource="http://api.ning.com/files/gSdbrsPropUzUeqwI6J-4IG6Mnkmri66MAVtHDm1*spLikyYQXPCoPPXDODhsuPnQENzLJfG3JPjTVxMQN3fwXKjFc7e0QQw/1440982072.jpeg?width=136"
+							r:label="Predictive Analytics for Supply Chain Management" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=C_%7BNB%7D+%3D+argmax+P%28d_1%7CC%29+%5Ccdot+P%28d_2%7CC%29+%5Ccdot+%5Ccdot+%5Ccdot+P%28d_n%7CC%29+%5Ccdot+P%28C%29"
+							r:label="C_{NB} = argmax P(d_1|C) &apos;cdot P(d_2|C) &apos;cdot &apos;cdot &apos;cdot P(d_n|C) &apos;cdot P(C)" />
+						<r:li
+							r:resource="http://api.ning.com/files/vuUh0rgUyT5YY1bqRxxX*xixp7A5QtOgMkJwrdfhmBbvJdXkESWXmOIQ4*ytm28omBtFwkzxST*S1J2R1tTaLs84E38GRoEr/1066474078.jpeg?amp;crop=1%3A1&amp;amp;height=32&amp;amp;width=32&amp;xgip=2%3A102%3A1218%3A1218%3B%3B"
+							r:label="AI&amp;rsquo;s Ethical Dilemma &amp;ndash; An Unexpectedly Urgent Problem" />
+						<r:li
+							r:resource="http://static.ning.com/socialnetworkmain/widgets/index/gfx/icon/facebook.gif?xn_version=2156446720"
+							r:label="Facebook" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C_%7Bneg%7D%29+%3D+0.141"
+							r:label="P(C_{neg}) = 0.141" />
+						<r:li
+							r:resource="http://static.ning.com/socialnetworkmain/widgets/index/gfx/Ning_MM_footer_blk@2x.png?xn_version=3605040243"
+							r:label="Website builder | Create website | Ning.com" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5CDelta+%5Clambda_i"
+							r:label="&apos;Delta &apos;lambda_i" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%3A-%7C"
+							r:label=":-|" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C%3Dc_i%7CD%29+%3D+%5Cfrac%7BP%28D%7CC%3Dc_i%29+%5Ccdot+P%28C%3Dc_i%29%7D%7BP%28D%29%7D+"
+							r:label="P(C=c_i|D) = &apos;frac{P(D|C=c_i) &apos;cdot P(C=c_i)}{P(D)} " />
+						<r:li
+							r:resource="http:/googleads.g.doubleclick.net/pagead/viewthroughconversion/1071360956/?amp;guid=ON&amp;amp;script=0&amp;value=0" />
+						<r:li
+							r:resource="http://api.ning.com/files/2ZTD6jtt0khBolNMUbuzTCFvc1SQY7GqaECP3ySsD4q63KnkPG6S2TiBXh023QS1L2XOHW3PSZJc*SQGlVE*GXjvq3fNSW6l/1580949779.jpeg?width=136"
+							r:label="Real-Time Analytics for IoT with Apache Edgent and IBM Streams" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=d_i"
+							r:label="d_i" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=i_%7Bth%7D"
+							r:label="i_{th}" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%3A%28"
+							r:label=":(" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%3A%29"
+							r:label=":)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=+F+%3D+%5Cfrac%7B2pr%7D%7Bp%2Br%7D"
+							r:label=" F = &apos;frac{2pr}{p+r}" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28d_i+%7C+C%29"
+							r:label="P(d_i | C)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Clambda_i+%3A%3D+%5Clambda_i+%2B+%5CDelta+%5Clambda_i+"
+							r:label="&apos;lambda_i := &apos;lambda_i + &apos;Delta &apos;lambda_i " />
+						<r:li
+							r:resource="http://api.ning.com/files/NFYpxxazpxMU-jc2EG1LTA8QOQgPT7GZdI4RrAxmabKcYmr34uJ7b02x5izPA3BKVtm0sHrltICJdJQkaKlGfvRkO0t-Uo1e/1169798849.jpeg?amp;crop=1%3A1&amp;amp;height=64&amp;amp;width=64&amp;xgip=0%3A0%3A266%3A266%3B%3B" />
+						<r:li r:resource="http:/xn_resources/widgets/index/gfx/jstrk_off.gif" />
+						<r:li
+							r:resource="http://api.ning.com/files/PuDGgWwpyfdBOtNP6BU0GuaCcvbiF742BFjcJjQ-cgq8--uTN7yF-l83-u2Pc3csxpmxX3RQHMWUoNam9itjoFvWv-PaYN9o/MdR.jpg?amp;crop=1%3A1&amp;amp;height=32&amp;width=32"
+							r:label="How to Analyze Big Data with Excel" />
+						<r:li
+							r:resource="http://api.ning.com/files/Vl6FuIcyK*t*yQq8XwjuDyynie7-uqQxXYfJoax9eLSrQnj1qsfTtZMH0qRUWBsBY7ZWKEESWuBnT68a14GUEXVF70lShJJF/DSC_0007.JPG?amp;crop=1%3A1&amp;amp;height=32&amp;width=32"
+							r:label="Tensorflow Tutorial : Part 1 &amp;ndash; Introduction" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=y_i"
+							r:label="y_i" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Cvec%7Bw%7D+%5Ccdot+%5Cvec%7Bx_i%7D+%2B+b+%5Cge+0"
+							r:label="&apos;vec{w} &apos;cdot &apos;vec{x_i} + b &apos;ge 0" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Csum_c+P_%7B%5CLambda%7D%28c%2Cd%29+%5Ccdot+f_i%28d%2Cc%29+%5Ccdot+exp+%28+%5CDelta+%5Clambda_i+f%5E%7B%5C%23%7D+%28d%2Cc%29+%29+%3D+%5Csum_d+f_i%28d%2Cc%29"
+							r:label="&apos;sum_c P_{&apos;Lambda}(c,d) &apos;cdot f_i(d,c) &apos;cdot exp ( &apos;Delta &apos;lambda_i f^{&apos;#} (d,c) ) = &apos;sum_d f_i(d,c)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%5Clambda_i"
+							r:label="&apos;lambda_i" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=p"
+							r:label="p" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=Z%28d%29"
+							r:label="Z(d)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=r"
+							r:label="r" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C_%7Bpos%7D%29+%3D+0.141"
+							r:label="P(C_{pos}) = 0.141" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=%3C+%5Cvec%7Bw%7D+%5Ccdot+%5Cvec%7Bx%7D+%3E+%2B+b+%3D+%5Csum_i+y_i+%5Calpha_i+%3C+%5Cvec%7Bx_i%7D+%5Ccdot+%5Cvec%7Bx%7D%3E+%2B+b+%3D+0+"
+							r:label="&lt; &apos;vec{w} &apos;cdot &apos;vec{x} &gt; + b = &apos;sum_i y_i &apos;alpha_i &lt; &apos;vec{x_i} &apos;cdot &apos;vec{x}&gt; + b = 0 " />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=p+%3D+argmax+H%28p%29"
+							r:label="p = argmax H(p)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=0.5N%28N-1%29"
+							r:label="0.5N(N-1)" />
+						<r:li
+							r:resource="http://api.ning.com/files/1Q*fTOyGxIC44DXjo7*IuSCC6V6ixprvm5iJblOWkmVCySn4yyiOevruBKHjd8QeuIBy7MgnZP*1BWqYWqKPQIiOKvDYYLKL/dsc_logo.png"
+							r:label="Data Science Central" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P_%7B%5CLambda%7D%28c%7Cd%29"
+							r:label="P_{&apos;Lambda}(c|d)" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=f%5E%7B%5C%23%7D+%28d%2Cc%29+%3D+%5Csum_i+f_i+%28d%2Cc%29+"
+							r:label="f^{&apos;#} (d,c) = &apos;sum_i f_i (d,c) " />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=+f_%7Bw%2Cc%27%7D%28d%2Cc%29+%3D+0"
+							r:label=" f_{w,c'}(d,c) = 0" />
+						<r:li
+							r:resource="http://https/d5nxst8fruw4z.cloudfront.net/atrk.gif?account=QpAKm1aMp4Z352" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=C_%7BNB%7D+%3D+argmax+P%28d_1%2C+d_2%2C+..%2C+d_n+%7C+C%29+%5Ccdot+P%28C%29"
+							r:label="C_{NB} = argmax P(d_1, d_2, .., d_n | C) &apos;cdot P(C)" />
+						<r:li
+							r:resource="http://https/ataspinar.files.wordpress.com/2015/11/capture.png?w=640"
+							r:label="Capture" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28C_%7Bpos%7D%29+%3D+0.141+%5Ccdot+50+%2F+240+%5Ccdot+10+%2F+240+%5Ccdot+100+%2F+240+%5Ccdot+70+%2F+240+%3D+1.49+%5Ccdot+10%5E%7B-3%7D"
+							r:label="P(C_{pos}) = 0.141 &apos;cdot 50 / 240 &apos;cdot 10 / 240 &apos;cdot 100 / 240 &apos;cdot 70 / 240 = 1.49 &apos;cdot 10^{-3}" />
+						<r:li
+							r:resource="http://https/s0.wp.com/latex.php?amp;bg=ffffff&amp;amp;fg=111111&amp;amp;s=0&amp;latex=P%28D%29"
+							r:label="P(D)" />
+					</r:Bag>
+				</r:li>
+			</r:Alt>
+		</t:references>
+		<d:description>
+			<r:Alt>
+				<r:li r:ID="DocumentSentences">
+					<r:Seq>
+						<r:li>Text Classification &amp;Sentiment Analysis tutorial / blog
+							- Data Science Central</r:li>
+						<r:li>Search</r:li>
+						<r:li>Sign Up</r:li>
+						<r:li>Sign In</r:li>
+						<r:li>Data Science Central</r:li>
+						<r:li>Home</r:li>
+						<r:li>Top Links</r:li>
+						<r:li>Data Science Book</r:li>
+						<r:li>Editorial Guidelines</r:li>
+						<r:li>User Agreement</r:li>
+						<r:li>DataViz</r:li>
+						<r:li>Hadoop</r:li>
+						<r:li>Big Data</r:li>
+						<r:li>Analytics</r:li>
+						<r:li>Webinars</r:li>
+						<r:li>Deep Learning</r:li>
+						<r:li>AI</r:li>
+						<r:li>Jobs</r:li>
+						<r:li>Membership</r:li>
+						<r:li>Previous Digests</r:li>
+						<r:li>Search</r:li>
+						<r:li>Classifieds</r:li>
+						<r:li>Contact</r:li>
+						<r:li>Subscribe to DSC Newsletter</r:li>
+						<r:li>All Blog Posts</r:li>
+						<r:li>My Blog</r:li>
+						<r:li>Add</r:li>
+						<r:li>Text Classification &amp;Sentiment Analysis tutorial / blog
+						</r:li>
+						<r:li>Posted by Ahmet Taspinar on January 11, 2016 at 6:30am
+						</r:li>
+						<r:li>View Blog</r:li>
+						<r:li>We all know that with Machine Learning you can automatically
+							classify text documents or analyze its subjectivity. We've just
+							released a guide that gives a brief introduction to Text
+							Classification.Â </r:li>
+						<r:li>It cover the three most used classifiers; Naive Bayes,
+							Maximum Entropy and Support Vector Machines and will give
+							practical examples in the form of the sentiment analysis of book
+							reviews.Â </r:li>
+						<r:li>Originally posted here .Â </r:li>
+						<r:li>Introduction:</r:li>
+						<r:li>Natural Language Processing (NLP) is a vast area of Computer
+							Science that is concerned with the interaction between Computers
+							and Human Language [1] .</r:li>
+						<r:li>Within NLP many tasks are â?? or can be reformulated as â??
+							classification tasks. In classification tasks we are trying to
+							produce a classification function which can give the correlation
+							between a certain â??featureâ??Â  D andÂ a classÂ  C .Â This
+							Classifier first has to be trained with a training dataset, and
+							then it can be used to actually classify documents. Training
+							means that we have to determine Â its model parameters. If the
+							set of training examples is chosen correctly, the Classifier
+							should predict the class probabilities of the actual documents
+							with a similar accuracy (as the training examples).</r:li>
+						<r:li>After construction, such a Classifier could for example tell
+							us that document containing the words â??Bose-Einstein
+							condensateâ?? shouldÂ be categorized as a Physics article, while
+							documents containing the words â??Arbitrageâ?? and â??Hedgingâ??
+							shouldÂ be categorized as a Finance article.</r:li>
+						<r:li>Another Classifier could tell usÂ that mails starting with
+							â??Dear Customer/Guest/Sirâ?? (instead of your name) and
+							containing words like â??Great opportunityâ?? or â??one-time
+							offerâ?? can be classified as spam.</r:li>
+						<r:li>Here we can already see two uses of classification models:Â 
+							topic classification Â andÂ  spam filtering . For these purposes
+							a Classifiers work quiet well and perform better than most
+							trained professionals.</r:li>
+						<r:li>A third usage of ClassifiersÂ is Sentiment Analysis. Here
+							the purpose is to determine the subjective value of a
+							text-document, i.e. how positive or negative is the contentÂ of a
+							text document. Unfortunately, for this purpose these
+							ClassifiersÂ fail to achieve the same accuracy.Â This is due to
+							the subtleties of human language; sarcasm, irony, context
+							interpretation, use of slang, cultural differences and the
+							different ways in which opinion can be expressed (subjective vs
+							comparative, explicit vs implicit).</r:li>
+						<r:li>In this blog I will discuss the theory behind three popular
+							Classifiers (Naive Bayes, Maximum Entropy and Support Vector
+							Machines) in the context of Sentiment Analysis [2] . In the next
+							blog I will apply this gained knowledge to automatically deduce
+							the sentimentÂ of collected Amazon.com book reviews.</r:li>
+						<r:li>The contents of this blog-post is as follows:</r:li>
+						<r:li>Basic concepts of text classification :</r:li>
+						<r:li>Tokenization</r:li>
+						<r:li>Word normalization</r:li>
+						<r:li>bag-of-words model</r:li>
+						<r:li>Classifier evaluation</r:li>
+						<r:li>NaieveÂ Bayesian Classifier</r:li>
+						<r:li>Maximum Entropy Classifier</r:li>
+						<r:li>Support Vector Machines</r:li>
+						<r:li>What to Expect</r:li>
+						<r:li>1. Basic Concepts</r:li>
+						<r:li>Tokenization:</r:li>
+						<r:li>TokenizationÂ  is the name given to the process of chopping
+							up sentences into smaller pieces (words or tokens). The
+							segmentation into tokens can be done with decision trees, which
+							contains information to correctly solve the issues you might
+							encounter. Some of these issues you would have to consider are:
+						</r:li>
+						<r:li>1. The choice for the delimiter will for most cases be a
+							whitespace (â??Weâ??re going to Barcelonaâ?? -&gt;
+							[â??Weâ??reâ??, â??goingâ??, â??toâ??, â??Barcelona.â??]), but
+							what should you do when you come across words with aÂ white space
+							in them (â??Weâ??re going to The Hague.â??-&gt;[â??Weâ??reâ??,
+							â??goingâ??,â??toâ??,â??Theâ??, â??Hagueâ??]).</r:li>
+						<r:li>2. What should you do with punctuation marks? Although many
+							tokenizers are geared towards throwing punctuation away, for
+							Sentiment analysis a lot of valuable information could be deduced
+							from them.Â  ! Â puts extra emphasis on the negative/positive
+							sentiment of the sentence, whileÂ  ? Â can mean uncertainty (no
+							sentiment).</r:li>
+						<r:li>2. â??, â?? , [], () can mean that the words belong together
+							and should be treated as a separate sentence. Same goes for words
+							which areÂ  bold , italic ,Â  underlined , orÂ  inside a link .
+							If you also want to take these last elements into considerating,
+							you should scrape the html code and not just the text.</r:li>
+						<r:li>Word Normalization:</r:li>
+						<r:li>Word Normalization Â  is the reduction of each word to its
+							base/stem form (by chopping of the affixes). While doing this, we
+							should consider the following issues:</r:li>
+						<r:li>1. Capital letters should be normalized to lowercase, unless
+							it occurs in the middle of a sentence; this could indicate the
+							name of a writer, place, brand etc.</r:li>
+						<r:li>2.Â What should be done with the apostrophe (â??);
+							â??Georgeâ??s phoneâ?? should obviously be tokenized as
+							â??Georgeâ?? and â??phoneâ??, but Iâ??m, weâ??re, theyâ??re
+							should be translated as I am, we are and they are. To make it
+							even more difficult; it can also be used as a quotation mark.
+						</r:li>
+						<r:li>3.Â Ambigious words like High-tech, The Hague, P.h.D., USA,
+							U.S.A.,Â US and us.</r:li>
+						<r:li>Bag-of-words :</r:li>
+						<r:li>After the text has been segmented into sentences, each
+							sentence has been segmented into words, the words have been
+							tokenized and normalized, we can make a simpleÂ  bag-of-words
+							Â model of the text. In this bag-of-words representation you only
+							take individual words into account and give each word a specific
+							subjectivity score. This subjectivity score can be looked up in a
+							sentiment lexicon [7] .Â If the total score is negative the text
+							will be classified as negative and if its positive the text will
+							be classified as positive.</r:li>
+						<r:li>Classifier Evaluation:</r:li>
+						<r:li>For determining the accuracy of a single Classifier, or
+							comparing the results of different Classifier, theÂ  F-score Â is
+							usually used. This F-score is given by</r:li>
+						<r:li>F = &apos;frac{2pr}{p+r}</r:li>
+						<r:li>whereÂ  p Â is the precision andÂ  r Â is the recall. The
+							precision is the number of correctly classified examples divided
+							by the total number of classified examples. The recall is the
+							number of correctly classified examples divided by the actual
+							number of examples in the training set.</r:li>
+						<r:li>2. Naive Bayes:</r:li>
+						<r:li>Naive BayesÂ  [3] Â classifiers are studying the
+							classification task from a Statistical point of view. The
+							starting point is that the probability of a classÂ  C Â is given
+							by theÂ  posterior probability Â  P(C|D) Â given a training
+							documentÂ  D . HereÂ  D Â refers to all of the text in the entire
+							training set. It is given byÂ  D = ( d_1, d_2, .., d_n )
+							,Â whereÂ  d_i Â is theÂ  i_{th} Â attribute (word) of documentÂ 
+							D .</r:li>
+						<r:li>Using Bayesâ?? rule, this posterior probability can be
+							rewritten as:</r:li>
+						<r:li>P(C=c_i|D) = &apos;frac{P(D|C=c_i) &apos;cdot
+							P(C=c_i)}{P(D)}</r:li>
+						<r:li>Since the marginal probabilityÂ  P(D) Â is equal for all
+							classes, it can be disregarded and the equation becomes:</r:li>
+						<r:li>P(C=c_i|D) = P(D|C=c_i) &apos;cdot P(C=c_i)</r:li>
+						<r:li>The documentÂ  D Â belongs to the classÂ  C Â which
+							maximizes this probability, so:</r:li>
+						<r:li>C_{NB} = argmax P(D|C) &apos;cdot P(C)</r:li>
+						<r:li>C_{NB} = argmax P(d_1, d_2, .., d_n | C) &apos;cdot P(C)
+						</r:li>
+						<r:li>AssumingÂ  conditional independence Â of the wordsÂ  d_i ,
+							this equation simplifies to:</r:li>
+						<r:li>C_{NB} = argmax P(d_1|C) &apos;cdot P(d_2|C) &apos;cdot
+							&apos;cdot &apos;cdot P(d_n|C) &apos;cdot P(C)</r:li>
+						<r:li>C_{NB} = argmax P(C) &apos;cdot &apos;prod_i P(d_i|C)</r:li>
+						<r:li>HereÂ  P(d_i | C) Â is the conditional probability that word
+							i belongs to classÂ  C . For the purpose of text classification,
+							this probability can simply be calculated by calculating the
+							frequency of word i in class C relative to the total number of
+							words in class C.</r:li>
+						<r:li>P(d_i | C) = &apos;frac{count(d_i, C)}{&apos;sum_i
+							count(d_i, C)}</r:li>
+						<r:li>We have seen that we need to multiply the class probability
+							with all of the prior-probabilities of the individualÂ words
+							belonging to that class. The question then is, how do we know
+							what the prior-probabilities of the words are? Â Here we need to
+							remember that this is a supervised machine learning algorithm: we
+							can estimate the prior-probabilities withÂ a training set with
+							documents that are already labeled with their classes. With this
+							training set we can train the model and obtain values for the
+							prior probabilities. This trained model can then be used for
+							classifying unlabeled documents.</r:li>
+						<r:li>This is relatively easy to understand with an example. Lets
+							say we have counted the number of words in a set of labeled
+							training documents. In this set each text document has been
+							labeled as either Positive, Neutral or as Negative. The result
+							will then look like :</r:li>
+						<r:li>Capture</r:li>
+						<r:li>From this table we can already deduce each of the class
+							probabilites:</r:li>
+						<r:li>P(C_{pos}) = 0.141 ,</r:li>
+						<r:li>P(C_{neu}) = 0.723 ,</r:li>
+						<r:li>P(C_{neg}) = 0.141 .</r:li>
+						<r:li>If we look at the sentence Â â??This blog-post is
+							awesome.â??,Â then the probabilities for this sentence belonging
+							to a specific class are:</r:li>
+						<r:li>P(C_{pos}) = 0.141 &apos;cdot 50 / 240 &apos;cdot 10 / 240
+							&apos;cdot 100 / 240 &apos;cdot 70 / 240 = 1.49 &apos;cdot
+							10^{-3}</r:li>
+						<r:li>P(C_{neu} = 0.723 &apos;cdot 500 / 1230 &apos;cdot 90 / 1230
+							&apos;cdot 600 / 1230 &apos;cdot 20 / 1230 = 1.71 &apos;cdot
+							10^{-4}</r:li>
+						<r:li>P(C_{neg}) = 0.141 &apos;cdot 50 / 240 &apos;cdot 10 / 240
+							&apos;cdot 100 / 240 &apos;cdot 10 / 240 = 2.12 &apos;cdot
+							10^{-4}</r:li>
+						<r:li>This sentence can thus be classified in the positive
+							category.</r:li>
+						<r:li>3. Maximum Entropy:</r:li>
+						<r:li>The principle behind Maximum EntropyÂ  [4] Â is that the
+							correct distribution is the one that maximizes the Entropy /
+							uncertainty and still meets the constraints which are set by the
+							â??evidenceâ??.</r:li>
+						<r:li>Let me explain this a bit more. In Information Theory, the
+							word Entropy Â is used as a unit of measure for the
+							unpredictability of the content of information. If you would
+							throw a fair dice, each of the six outcomes have the same
+							probability of occuring (1/6). Therefore you have maximum
+							uncertainty; an entropy of 1. If the dice is weighted you already
+							know one of the six outcomes has a higher probability of occuring
+							and the uncertainty becomes less. If the dice is weighted so much
+							that the outcome is always six, there is zero uncertainty in the
+							outcome and hence the information entropy is also zero.</r:li>
+						<r:li>The same applies to letters in a word (or words in a
+							sentence): if you assume that every letter has the same
+							probability of occuring you have maximum uncertainty in
+							predicting the next letter. But if you know that letters like E,
+							A, O or I have a higher probability of occuring you have less
+							uncertainty.</r:li>
+						<r:li>Knowing this, we can say that complex data has a high
+							entropy, patterns and trends have lower entropy, information you
+							know for a fact to be true has zero entropy (and therefore can be
+							excluded).</r:li>
+						<r:li>The idea behind Maximum Entropy is that you want a model
+							which is as unbiased as possible; events which are not excluded
+							by known constraints should be assigned as much uncertainty as
+							possible, meaning the probability distribution should be as
+							uniform as possible. You are looking for the maximum value of the
+							Entropy. If this is not entirely clear, I recommend you to read
+							throughÂ  this Â example.</r:li>
+						<r:li>The mathematical formula for Entropy is given byÂ  H(p) = -
+							&apos;sum p(a,b) log p(a,b) , so the most likely probability
+							distributionÂ  p is the one that maximizes this entropy:</r:li>
+						<r:li>p = argmax H(p)</r:li>
+						<r:li>It can beÂ  shownÂ  that the probability distribution has an
+							exponential form and hence is given by:</r:li>
+						<r:li>P(c|d) = &apos;frac{1}{Z(d)} exp ( &apos;sum_i
+							&apos;lambda_i f_i(d,c)) ,</r:li>
+						<r:li>whereÂ  f_i(d,c) Â is a feature function,Â  &apos;lambda_i
+							Â is the weight parameter of the feature function andÂ  Z(d) Â is
+							a normalization factor given by</r:li>
+						<r:li>Z(d) = &apos;sum_c exp ( &apos;sum_i &apos;lambda_i f_i(d,c)
+							) .</r:li>
+						<r:li>This feature function is anÂ  indicator function , which is
+							expresses the expected value of the chosen statistics (words)
+							inÂ the training set. These feature functions can then be taken
+							as constraints for the classification of the actual dataset (by
+							eliminating the probability distributions P(c|d) which do not fit
+							with these constraints).</r:li>
+						<r:li>Usually, the weight parameters areÂ automatically determined
+							by the Improved Iterative Scaling algorithm. This is simply aÂ 
+							gradient descent function which can be iterated over until it
+							convergesÂ to the global maximum. The pseudocode for the this
+							algorithm is as follows:</r:li>
+						<r:li>Initialize all weight parametersÂ  &apos;lambda_i Â to zero.
+						</r:li>
+						<r:li>Repeat until convergence:</r:li>
+						<r:li>calculate the probability distributionÂ 
+							P_{&apos;Lambda}(c|d) Â with the weight parameters filled in.
+						</r:li>
+						<r:li>for each parameterÂ  &apos;lambda_i Â calculateÂ 
+							&apos;Delta &apos;lambda_i . This is the solution to:</r:li>
+						<r:li>&apos;sum_c P_{&apos;Lambda}(c,d) &apos;cdot f_i(d,c)
+							&apos;cdot exp ( &apos;Delta &apos;lambda_i f^{&apos;#} (d,c) ) =
+							&apos;sum_d f_i(d,c)</r:li>
+						<r:li>update the value for the weight parameter:</r:li>
+						<r:li>&apos;lambda_i := &apos;lambda_i + &apos;Delta
+							&apos;lambda_i</r:li>
+						<r:li>In step 2bÂ  f^{&apos;#}(d,c) Â is given by the sum of all
+							features in the training dataset d:Â  f^{&apos;#} (d,c) =
+							&apos;sum_i f_i (d,c)</r:li>
+						<r:li>Maximum Entropy is a general statistical classification
+							algorithm and can be used to estimate any probability
+							distribution. For the specific case of text classification, we
+							can limit its form a bit more byÂ using word counts as features:
+						</r:li>
+						<r:li>f_{w,c'}(d,c) = 0 Â ifÂ  c &apos;neq c'</r:li>
+						<r:li>f_{w,c'}(d,c) = &apos;frac{count(d,w)}{count(d)}
+							Â otherwise.</r:li>
+						<r:li>4. Support Vector Machines:</r:li>
+						<r:li>Although it is not immediatly obvious from the name, the SVM
+							algorithm is a â??simpleâ?? linear classification/regression
+							algorithm [6] . It tries to find a hyperplaneÂ  which seperates
+							theÂ data in two classes as optimally as possible.</r:li>
+						<r:li>Here as optimally as possible meansÂ that as much points as
+							possibleÂ of labelÂ A should be seperated to one side of the
+							hyperplaneÂ and as points of labelÂ B to the other side, while
+							maximizing the distance of each point to this hyperplane.</r:li>
+						<r:li>Â </r:li>
+						<r:li>svm_max_sep_hyperplane_with_margin</r:li>
+						<r:li>In the image above we can see this illustrated for the
+							example ofÂ points plotted in 2D-space. The set of points are
+							labeled Â with two categories (illustrated here with black and
+							white points) and SVM chooses the hypeplane that maximizes the
+							margin between the two classes. This hyperplane is given by
+						</r:li>
+						<r:li>&lt; &apos;vec{w} &apos;cdot &apos;vec{x} &gt; + b =
+							&apos;sum_i y_i &apos;alpha_i &lt; &apos;vec{x_i} &apos;cdot
+							&apos;vec{x}&gt; + b = 0</r:li>
+						<r:li>whereÂ  &apos;vec{x_i} = (x_{i1}, x_{i2}, .. , x_{in} ) Â is
+							a n-dimensional input vector,Â  y_i Â is its output value,Â 
+							&apos;vec{w} = (w_1, w_2, .. , w_n ) Â is the weight vector
+							(theÂ  normalÂ  vector) definingÂ the hyperplane and theÂ 
+							&apos;alpha_i Â terms are the Lagrangian multipliers.</r:li>
+						<r:li>Once the hyperplane is constructed (the vectorÂ 
+							&apos;vec{w} Â is defined) with a training set, the class of any
+							other input vectorÂ  &apos;vec{x_i} Â can be determined: Â if
+							&apos;vec{w} &apos;cdot &apos;vec{x_i} + b &apos;ge 0 Â then it
+							belongs to the positive class (the class we are interested in),
+							otherwise it belongs to the negative class (all of the other
+							classes).</r:li>
+						<r:li>We can already see this leads to two interesting questions:
+						</r:li>
+						<r:li>1. SVM only seems to work when the two classes areÂ 
+							linearly separable . How can we deal withÂ  non-linear datasets ?
+							Here I feel the urge to point out that the Naive Bayes and
+							Maximum Entropy are linear classifiers as well and most text
+							documents will be linear. Our training example of Amazon book
+							reviews will be linear as well. But an explanation of the SVM
+							system will not be complete without an explanation of Kernel
+							functions.</r:li>
+						<r:li>2. SVM only seems to be able to separate the dataset into
+							two classes? How can we deal with datasets with more than two
+							classes. For Sentiment Classification we have for example three
+							classes (positive, neutral, negative) and for Topic
+							Classification we can have even more than that.</r:li>
+						<r:li>Kernel Functions:</r:li>
+						<r:li>The classical SVM system requires that the dataset is
+							linearly separable, i.e. there is a single hyperplane which can
+							separate the two classes. For non-linear datasets a Kernel
+							function is used to map the data to a higher dimensional space in
+							which it is linearly separable.Â  This video gives a good
+							illustation of such a mapping. In this higher dimensional feature
+							space, the classical SVM system can then be used to construct a
+							hyperplane.</r:li>
+						<r:li>Multiclass classification:</r:li>
+						<r:li>The classical SVM system is a binary classifier, meaning
+							that it can only separate the dataset into Â two classes. To deal
+							with datasets with more than two classes usually the dataset is
+							reduced to a binary class dataset with which the SVM can work.
+							There are two approaches for decomposing a multiclass
+							classification problemÂ to a binary classification problem: the
+							one-vs-all and one-vs-one approach.</r:li>
+						<r:li>In the one-vs-all approach one SVM Classifier is build per
+							class. This Classifier takes that one class as the positive class
+							and the rest of the classes as the negative class. A datapoint is
+							then only classified within a specific class if it is accepted by
+							that Classâ?? Classifier and rejected by all other classifiers.
+							Although this can lead to accurate results (if the dataset is
+							clustered), a lot of datapoints can also be left unclassified (if
+							the dataset is not clustered).</r:li>
+						<r:li>In the one-vs-one approach, you build one SVM Classifier per
+							chosen pair of classes. Since there areÂ  0.5N(N-1) Â possible
+							pair combinations for a set of N classes, this means you have to
+							construct more Classifiers. Datapoints are then categorized in
+							the class for which they have received the most points.</r:li>
+						<r:li>In our example, there are only three classes (positive,
+							neutral, negative) so there is no real difference between these
+							two approaches. In both approaches we have to construct two
+							hyperplanes; positive vs the rest and negative vs the rest.Â 
+						</r:li>
+						<r:li>What to expect:</r:li>
+						<r:li>For the purpose of testing these Classification methods, I
+							have collected &gt;300.000 book reviews of 10 different books
+							from Amazon.com. I will use a part of these book reviews for
+							training purposes and a part as the test dataset. In the next few
+							blogs I will try to automatically classify the sentiment of these
+							reviews with the four models described above.</r:li>
+						<r:li>PS:Â  Please feel free to contact me if you see missing or
+							unclear information.</r:li>
+						<r:li>PS2 : Dont forget to follow my blog.</r:li>
+						<r:li>â??â??â??â??â??â??â??â??â??â??â??â??â??-</r:li>
+						<r:li>[1] Machine Learning Literature:</r:li>
+						<r:li>Foundations of Statistical Natural Language Processing Â by
+							Manning and Schutze,</r:li>
+						<r:li>Machine Learning: A probabilistic perspective Â by Kevin P.
+							Murphy,</r:li>
+						<r:li>Foundations of Machine Learning Â by Mehryar Mohri</r:li>
+						<r:li>Move to top</r:li>
+						<r:li>[2]Sentiment Analysis literature:</r:li>
+						<r:li>There is already a lot of information available and a lot of
+							research done on Sentiment Analysis. Â To get a basic
+							understanding and some background information, you can read Pang
+							et.al.â??s 2002Â  article . In this article,Â the different
+							Classifiers are explained and compared for sentiment analysis of
+							Movie reviews (IMDB). This research was very close toÂ Turneyâ??s
+							2002 research on Sentiment Analysis of movie reviews (seeÂ 
+							article ). You can also read Bo Pang and Lillian Leeâ??s 2009
+							articleÂ  , whichÂ is more general in nature (about the
+							challenges of SA, the differentÂ MLÂ techniques Â etc.)</r:li>
+						<r:li>There are also two relevant books:Â  Web Data Mining Â andÂ 
+							Sentiment Analysis , both by Bing Liu. And last but not least,
+							works ofÂ  Socher Â are also quiet interestingÂ (seeÂ  paper ,Â 
+							website Â containing live demo); it even has inspired thisÂ 
+							kaggle competition .</r:li>
+						<r:li>Move to top</r:li>
+						<r:li>[3] Naive Bayes Literature:</r:li>
+						<r:li>Machine Learning Â by Tom Mitchel, Stanfordâ??sÂ  IR-book ,
+							Sebastian Raschkaâ??sÂ  blog-post , Stanfordâ??s onlineÂ  NLP
+							course .</r:li>
+						<r:li>Move to top</r:li>
+						<r:li>[4]Maximum Entropy Literature:</r:li>
+						<r:li>Using Maximum Entropy for text classification Â (1999),Â  A
+							simple introduction to Maximum Entropy models Â (1997),Â  A brief
+							MaxEnt tutorial , another good MIT article .</r:li>
+						<r:li>Move to top</r:li>
+						<r:li>[6]SVM Literature:</r:li>
+						<r:li>ThisÂ  youtube video Â gives a general idea about SVM. For a
+							more technical explanation,Â  this Â andÂ Â  thisÂ  article can
+							be read.Â  Here Â you can find a good explanation as well as a
+							list of the mostly usedÂ Kernel functions.Â  one-vs-one and
+							one-vs-all .</r:li>
+						<r:li>Move to top</r:li>
+						<r:li>[7] Sentiment Lexicons:</r:li>
+						<r:li>I have selected a list of sentiment analysis
+							lexicons;Â mostÂ of these were mentioned in theÂ  Natural
+							Language Processing Â course, the rest are fromÂ  stackoverflow
+							.Â </r:li>
+						<r:li>WordStat sentiment Dictionary ; This is probably one of the
+							largest lexicons freely available. It containsÂ ~14.000 words (
+							9164 negative and 4847 positive words ) and gives words a binary
+							classification (positive or a negative ) score.</r:li>
+						<r:li>Bill McDonalds Â 2014 Master dictionary, containing ~85.000
+							word</r:li>
+						<r:li>Harvard Inquirer ; Contains about ~11.780 words and has a
+							more complex way of â??scoringâ?? words; each word can be scored
+							in 15+ categories; words can be Positiv-Negative, Strong-Weak,
+							Active-Passive, Pleasure-Pain, words can indicate pleasure, pain,
+							virtue and vice etc etc</r:li>
+						<r:li>SentiWordNet ; gives the words a positive or negative score
+							between 0 and 1. ItÂ contains about 117.660 words, however only
+							~29.000 of these words have been scored (either positive or
+							negative).</r:li>
+						<r:li>MPQA ; contains about ~8.200 words and binary
+							classifiesÂ each word (as either positive or as negative). It
+							also gives additional information such as whether a word is an
+							adjective or a noun and whether a word is â??strong subjectiveâ??
+							or â??weak subjectiveâ??.</r:li>
+						<r:li>Bing Liuâ??s opinion lexicon ; contains 4.782 negative and
+							2.005 positive words.</r:li>
+						<r:li>Including Emoticons in your dictionary;</r:li>
+						<r:li>None of the dictionaries described above contain emoticons,
+							which might be an essential part of text if you are analyzing
+							social media. So how can we include emoticons in our subjectivity
+							analysis? Everybody knowsÂ  :) Â is a positive andÂ  :( Â is a
+							negative emoticon but what exactly doesÂ  :-| Â mean and how is
+							it different from :-/?</r:li>
+						<r:li>There are a few emoticon sentimentÂ dictionaries on the web
+							which you could use;Â  Emoticon Sentiment Lexicon Â created by
+							Hogenboom et. al., containing a list of Â 477 emoticons which are
+							scored either 1 (positive), 0 (neutral) or -1 (negative).Â You
+							could also make your own emoticon sentiment dictionary by giving
+							the emoticons the same score as their meaning in words.</r:li>
+						<r:li>Views: 18977</r:li>
+						<r:li>Tags:</r:li>
+						<r:li>Like 8 members like this</r:li>
+						<r:li>Share Tweet Facebook</r:li>
+						<r:li>Next Post &gt;</r:li>
+						<r:li>Comment</r:li>
+						<r:li>You need to be a member of Data Science Central to add
+							comments!</r:li>
+						<r:li>Join Data Science Central</r:li>
+						<r:li>Comment by Leo Li on January 25, 2016 at 5:11pm</r:li>
+						<r:li>good article. #really quantitative! Any empirical result?
+						</r:li>
+						<r:li>RSS</r:li>
+						<r:li>Welcome to</r:li>
+						<r:li>Data Science Central</r:li>
+						<r:li>Sign Up</r:li>
+						<r:li>or Sign In</r:li>
+						<r:li>Or sign in with:</r:li>
+						<r:li>Follow Us</r:li>
+						<r:li>@DataScienceCtrl  |  RSS Feeds</r:li>
+						<r:li>Top Content</r:li>
+						<r:li>Edit</r:li>
+						<r:li>1 Tensorflow Tutorial : Part 1 &amp;ndash; Introduction
+							Tensorflow Tutorial : Part 1 &amp;ndash; Introduction 2 The Slow
+							Decline of Google Search The Slow Decline of Google Search 3 How
+							to Analyze Big Data with Excel How to Analyze Big Data with Excel
+							4 AI&amp;rsquo;s Ethical Dilemma &amp;ndash; An Unexpectedly
+							Urgent Problem AI&amp;rsquo;s Ethical Dilemma &amp;ndash; An
+							Unexpectedly Urgent Problem 5 16 analytic disciplines compared to
+							data science 16 analytic disciplines compared to data science 6
+							Top 6 Data Modeling Tools Top 6 Data Modeling Tools</r:li>
+						<r:li>RSS</r:li>
+						<r:li>View All</r:li>
+						<r:li>Announcements</r:li>
+						<r:li>Data Science Models &amp;Tools at Open Data Science
+							Conference</r:li>
+						<r:li>Agile Data Mastering With Dr. Michael Stonebraker</r:li>
+						<r:li>Moving from BI to Automated Machine Learning</r:li>
+						<r:li>Maximize the ROI of any Big Data Investment</r:li>
+						<r:li>Unveiling Anaconda Enterprise 5</r:li>
+						<r:li>Join data scientists from around the globe October 9-12
+						</r:li>
+						<r:li>Deadline Approaching - Earn Your M.S. in Data Science Online
+						</r:li>
+						<r:li>Boost Your Business Intelligence</r:li>
+						<r:li>Machine Learning Automation - Use Case</r:li>
+						<r:li>The Future of Data is Here &amp;ndash; See you in December
+						</r:li>
+						<r:li>Videos</r:li>
+						<r:li>Real-Time Analytics for IoT with Apache Edgent and IBM
+							Streams Real-Time Analytics for IoT with Apache Edgent and IBM
+							Streams</r:li>
+						<r:li>Added by Tim Matteson 0 Comments 0 Likes</r:li>
+						<r:li>Predictive Analytics for Supply Chain Management Predictive
+							Analytics for Supply Chain Management</r:li>
+						<r:li>Added by Tim Matteson 0 Comments 3 Likes</r:li>
+						<r:li>Add Videos</r:li>
+						<r:li>View All</r:li>
+						<r:li>Facebook</r:li>
+						<r:li>Resources Top Categories</r:li>
+						<r:li>Machine Learning  </r:li>
+						<r:li>R Programming   </r:li>
+						<r:li>Python for Data Science   </r:li>
+						<r:li>Visualization, Dashboards  </r:li>
+						<r:li>NoSQL and NewSQL  </r:li>
+						<r:li>Big Data  </r:li>
+						<r:li>Cheat Sheets</r:li>
+						<r:li>Internet of Things  </r:li>
+						<r:li>Excel  </r:li>
+						<r:li>Â© 2017 Data Science Central Powered by Website builder |
+							Create website | Ning.com</r:li>
+						<r:li>Badges | Report an Issue | Privacy Policy | Terms of Service
+						</r:li>
+						<r:li>Hello, you need to enable JavaScript to use Data Science
+							Central.</r:li>
+						<r:li>Please check your browser settings or contact your system
+							administrator.</r:li>
+					</r:Seq>
+				</r:li>
+				<r:li r:ID='OriginalContent'>
+					<h:ContentType>text/html</h:ContentType>
+					<h:ContentLength>123444</h:ContentLength>
+				</r:li>
+				<r:li r:ID='FilteredText'>
+					<h:ContentType>text/plain</h:ContentType>
+					<h:ContentLength>24185</h:ContentLength>
+					<h:Body r:parseType='Literal'>
+						Text Classification &Sentiment Analysis tutorial / blog - Data
+						Science Central
+						Search
+						Sign Up
+						Sign In
+						Data Science Central
+						Home
+						Top Links
+						Data Science Book
+						Editorial Guidelines
+						User Agreement
+						DataViz
+						Hadoop
+						Big Data
+						Analytics
+						Webinars
+						Deep Learning
+						AI
+						Jobs
+						Membership
+						Previous Digests
+						Search
+						Classifieds
+						Contact
+						Subscribe to DSC Newsletter
+						All Blog Posts
+						My Blog
+						Add
+						Text Classification &Sentiment Analysis tutorial / blog
+						Posted by Ahmet Taspinar on January 11, 2016 at 6:30am
+						View Blog
+						We all know that with Machine Learning you can automatically
+						classify text documents or analyze its subjectivity. We've just
+						released a guide that gives a brief introduction to Text
+						Classification.Â 
+						It cover the three most used classifiers; Naive Bayes, Maximum
+						Entropy and Support Vector Machines and will give practical
+						examples in the form of the sentiment analysis of book reviews.Â 
+						Originally posted here .Â 
+						Introduction:
+						Natural Language Processing (NLP) is a vast area of Computer Science that
+						is concerned with the interaction between Computers and Human
+						Language [1] .
+						Within NLP many tasks are â?? or can be reformulated as â??
+						classification tasks. In classification tasks we are trying to
+						produce a classification function which can give the correlation
+						between a certain â??featureâ??Â  D andÂ a classÂ  C .Â This
+						Classifier first has to be trained with a training dataset, and
+						then it can be used to actually classify documents. Training means
+						that we have to determine Â its model parameters. If the set of
+						training examples is chosen correctly, the Classifier should
+						predict the class probabilities of the actual documents with a
+						similar accuracy (as the training examples).
+						After construction, such a Classifier could for example tell us that
+						document containing the words â??Bose-Einstein condensateâ??
+						shouldÂ be categorized as a Physics article, while documents
+						containing the words â??Arbitrageâ?? and â??Hedgingâ?? shouldÂ be
+						categorized as a Finance article.
+						Another Classifier could tell usÂ that mails starting with â??Dear
+						Customer/Guest/Sirâ?? (instead of your name) and containing words
+						like â??Great opportunityâ?? or â??one-time offerâ?? can be
+						classified as spam.
+						Here we can already see two uses of classification models:Â  topic
+						classification Â andÂ  spam filtering . For these purposes a
+						Classifiers work quiet well and perform better than most trained
+						professionals.
+						A third usage of ClassifiersÂ is Sentiment Analysis. Here the
+						purpose is to determine the subjective value of a text-document,
+						i.e. how positive or negative is the contentÂ of a text document.
+						Unfortunately, for this purpose these ClassifiersÂ fail to achieve
+						the same accuracy.Â This is due to the subtleties of human
+						language; sarcasm, irony, context interpretation, use of slang,
+						cultural differences and the different ways in which opinion can
+						be expressed (subjective vs comparative, explicit vs implicit).
+						In this blog I will discuss the theory behind three popular
+						Classifiers (Naive Bayes, Maximum Entropy and Support Vector
+						Machines) in the context of Sentiment Analysis [2] . In the next
+						blog I will apply this gained knowledge to automatically deduce
+						the sentimentÂ of collected Amazon.com book reviews.
+						The contents of this blog-post is as follows:
+						Basic concepts of text classification :
+						Tokenization
+						Word normalization
+						bag-of-words model
+						Classifier evaluation
+						NaieveÂ Bayesian Classifier
+						Maximum Entropy Classifier
+						Support Vector Machines
+						What to Expect
+						1. Basic Concepts
+						Tokenization:
+						TokenizationÂ  is the name given to the process of chopping up sentences into
+						smaller pieces (words or tokens). The segmentation into tokens can
+						be done with decision trees, which contains information to
+						correctly solve the issues you might encounter. Some of these
+						issues you would have to consider are:
+						1. The choice for the delimiter will for most cases be a whitespace
+						(â??Weâ??re going to Barcelonaâ?? -> [â??Weâ??reâ??, â??goingâ??,
+						â??toâ??, â??Barcelona.â??]), but what should you do when you come
+						across words with aÂ white space in them (â??Weâ??re going to The
+						Hague.â??->[â??Weâ??reâ??, â??goingâ??,â??toâ??,â??Theâ??,
+						â??Hagueâ??]).
+						2. What should you do with punctuation marks? Although many
+						tokenizers are geared towards throwing punctuation away, for
+						Sentiment analysis a lot of valuable information could be deduced
+						from them.Â  ! Â puts extra emphasis on the negative/positive
+						sentiment of the sentence, whileÂ  ? Â can mean uncertainty (no
+						sentiment).
+						2. â??, â?? , [], () can mean that the words belong together and
+						should be treated as a separate sentence. Same goes for words
+						which areÂ  bold , italic ,Â  underlined , orÂ  inside a link . If
+						you also want to take these last elements into considerating, you
+						should scrape the html code and not just the text.
+						Word Normalization:
+						Word Normalization Â  is the reduction of each word to its base/stem
+						form (by chopping of the affixes). While doing this, we should
+						consider the following issues:
+						1. Capital letters should be normalized to lowercase, unless it
+						occurs in the middle of a sentence; this could indicate the name
+						of a writer, place, brand etc.
+						2.Â What should be done with the apostrophe (â??); â??Georgeâ??s phoneâ??
+						should obviously be tokenized as â??Georgeâ?? and â??phoneâ??, but
+						Iâ??m, weâ??re, theyâ??re should be translated as I am, we are and
+						they are. To make it even more difficult; it can also be used as a
+						quotation mark.
+						3.Â Ambigious words like High-tech, The Hague, P.h.D., USA, U.S.A.,Â US and us.
+						Bag-of-words :
+						After the text has been segmented into sentences, each sentence has
+						been segmented into words, the words have been tokenized and
+						normalized, we can make a simpleÂ  bag-of-words Â model of the
+						text. In this bag-of-words representation you only take individual
+						words into account and give each word a specific subjectivity
+						score. This subjectivity score can be looked up in a sentiment
+						lexicon [7] .Â If the total score is negative the text will be
+						classified as negative and if its positive the text will be
+						classified as positive.
+						Classifier Evaluation:
+						For determining the accuracy of a single Classifier, or comparing the
+						results of different Classifier, theÂ  F-score Â is usually used.
+						This F-score is given by
+						F = \frac{2pr}{p+r}
+						whereÂ  p Â is the precision andÂ  r Â is the recall. The precision is
+						the number of correctly classified examples divided by the total
+						number of classified examples. The recall is the number of
+						correctly classified examples divided by the actual number of
+						examples in the training set.
+						2. Naive Bayes:
+						Naive BayesÂ  [3] Â classifiers are studying the classification task
+						from a Statistical point of view. The starting point is that the
+						probability of a classÂ  C Â is given by theÂ  posterior
+						probability Â  P(C|D) Â given a training documentÂ  D . HereÂ  D
+						Â refers to all of the text in the entire training set. It is
+						given byÂ  D = ( d_1, d_2, .., d_n ) ,Â whereÂ  d_i Â is theÂ 
+						i_{th} Â attribute (word) of documentÂ  D .
+						Using Bayesâ?? rule, this posterior probability can be rewritten as:
+						P(C=c_i|D) = \frac{P(D|C=c_i) \cdot P(C=c_i)}{P(D)}
+						Since the marginal probabilityÂ  P(D) Â is equal for all classes, it
+						can be disregarded and the equation becomes:
+						P(C=c_i|D) = P(D|C=c_i) \cdot P(C=c_i)
+						The documentÂ  D Â belongs to the classÂ  C Â which maximizes this
+						probability, so:
+						C_{NB} = argmax P(D|C) \cdot P(C)
+						C_{NB} = argmax P(d_1, d_2, .., d_n | C) \cdot P(C)
+						AssumingÂ  conditional independence Â of the wordsÂ  d_i , this equation
+						simplifies to:
+						C_{NB} = argmax P(d_1|C) \cdot P(d_2|C) \cdot \cdot \cdot P(d_n|C) \cdot
+						P(C)
+						C_{NB} = argmax P(C) \cdot \prod_i P(d_i|C)
+						HereÂ  P(d_i | C) Â is the conditional probability that word i belongs
+						to classÂ  C . For the purpose of text classification, this
+						probability can simply be calculated by calculating the frequency
+						of word i in class C relative to the total number of words in
+						class C.
+						P(d_i | C) = \frac{count(d_i, C)}{\sum_i count(d_i, C)}
+						We have seen that we need to multiply the class probability with all
+						of the prior-probabilities of the individualÂ words belonging to
+						that class. The question then is, how do we know what the
+						prior-probabilities of the words are? Â Here we need to remember
+						that this is a supervised machine learning algorithm: we can
+						estimate the prior-probabilities withÂ a training set with
+						documents that are already labeled with their classes. With this
+						training set we can train the model and obtain values for the
+						prior probabilities. This trained model can then be used for
+						classifying unlabeled documents.
+						This is relatively easy to understand with an example. Lets say we
+						have counted the number of words in a set of labeled training
+						documents. In this set each text document has been labeled as
+						either Positive, Neutral or as Negative. The result will then look
+						like :
+						Capture
+						From this table we can already deduce each of the class probabilites:
+						P(C_{pos}) = 0.141 ,
+						P(C_{neu}) = 0.723 ,
+						P(C_{neg}) = 0.141 .
+						If we look at the sentence Â â??This blog-post is awesome.â??,Â then
+						the probabilities for this sentence belonging to a specific class
+						are:
+						P(C_{pos}) = 0.141 \cdot 50 / 240 \cdot 10 / 240 \cdot 100 / 240 \cdot 70 /
+						240 = 1.49 \cdot 10^{-3}
+						P(C_{neu} = 0.723 \cdot 500 / 1230 \cdot 90 / 1230 \cdot 600 / 1230 \cdot
+						20 / 1230 = 1.71 \cdot 10^{-4}
+						P(C_{neg}) = 0.141 \cdot 50 / 240 \cdot 10 / 240 \cdot 100 / 240 \cdot 10 /
+						240 = 2.12 \cdot 10^{-4}
+						This sentence can thus be classified in the positive category.
+						3. Maximum Entropy:
+						The principle behind Maximum EntropyÂ  [4] Â is that the correct
+						distribution is the one that maximizes the Entropy / uncertainty
+						and still meets the constraints which are set by the
+						â??evidenceâ??.
+						Let me explain this a bit more. In Information Theory, the word
+						Entropy Â is used as a unit of measure for the unpredictability of
+						the content of information. If you would throw a fair dice, each
+						of the six outcomes have the same probability of occuring (1/6).
+						Therefore you have maximum uncertainty; an entropy of 1. If the
+						dice is weighted you already know one of the six outcomes has a
+						higher probability of occuring and the uncertainty becomes less.
+						If the dice is weighted so much that the outcome is always six,
+						there is zero uncertainty in the outcome and hence the information
+						entropy is also zero.
+						The same applies to letters in a word (or words in a sentence): if
+						you assume that every letter has the same probability of occuring
+						you have maximum uncertainty in predicting the next letter. But if
+						you know that letters like E, A, O or I have a higher probability
+						of occuring you have less uncertainty.
+						Knowing this, we can say that complex data has a high entropy, patterns
+						and trends have lower entropy, information you know for a fact to
+						be true has zero entropy (and therefore can be excluded).
+						The idea behind Maximum Entropy is that you want a model which is as
+						unbiased as possible; events which are not excluded by known
+						constraints should be assigned as much uncertainty as possible,
+						meaning the probability distribution should be as uniform as
+						possible. You are looking for the maximum value of the Entropy. If
+						this is not entirely clear, I recommend you to read throughÂ  this
+						Â example.
+						The mathematical formula for Entropy is given byÂ  H(p) = - \sum
+						p(a,b) log p(a,b) , so the most likely probability distributionÂ 
+						p is the one that maximizes this entropy:
+						p = argmax H(p)
+						It can beÂ  shownÂ  that the probability distribution has an
+						exponential form and hence is given by:
+						P(c|d) = \frac{1}{Z(d)} exp ( \sum_i \lambda_i f_i(d,c)) ,
+						whereÂ  f_i(d,c) Â is a feature function,Â  \lambda_i Â is the weight
+						parameter of the feature function andÂ  Z(d) Â is a normalization
+						factor given by
+						Z(d) = \sum_c exp ( \sum_i \lambda_i f_i(d,c) ) .
+						This feature function is anÂ  indicator function , which is expresses
+						the expected value of the chosen statistics (words) inÂ the
+						training set. These feature functions can then be taken as
+						constraints for the classification of the actual dataset (by
+						eliminating the probability distributions P(c|d) which do not fit
+						with these constraints).
+						Usually, the weight parameters areÂ automatically determined by the
+						Improved Iterative Scaling algorithm. This is simply aÂ  gradient
+						descent function which can be iterated over until it convergesÂ to
+						the global maximum. The pseudocode for the this algorithm is as
+						follows:
+						Initialize all weight parametersÂ  \lambda_i Â to zero.
+						Repeat until convergence:
+						calculate the probability distributionÂ  P_{\Lambda}(c|d) Â with the weight
+						parameters filled in.
+						for each parameterÂ  \lambda_i Â calculateÂ  \Delta \lambda_i . This
+						is the solution to:
+						\sum_c P_{\Lambda}(c,d) \cdot f_i(d,c) \cdot exp ( \Delta \lambda_i
+						f^{\#} (d,c) ) = \sum_d f_i(d,c)
+						update the value for the weight parameter:
+						\lambda_i := \lambda_i + \Delta \lambda_i
+						In step 2bÂ  f^{\#}(d,c) Â is given by the sum of all features in
+						the training dataset d:Â  f^{\#} (d,c) = \sum_i f_i (d,c)
+						Maximum Entropy is a general statistical classification algorithm and can
+						be used to estimate any probability distribution. For the specific
+						case of text classification, we can limit its form a bit more
+						byÂ using word counts as features:
+						f_{w,c'}(d,c) = 0 Â ifÂ  c \neq c'
+						f_{w,c'}(d,c) = \frac{count(d,w)}{count(d)} Â otherwise.
+						4. Support Vector Machines:
+						Although it is not immediatly obvious from the name, the SVM algorithm is
+						a â??simpleâ?? linear classification/regression algorithm [6] . It
+						tries to find a hyperplaneÂ  which seperates theÂ data in two
+						classes as optimally as possible.
+						Here as optimally as possible meansÂ that as much points as
+						possibleÂ of labelÂ A should be seperated to one side of the
+						hyperplaneÂ and as points of labelÂ B to the other side, while
+						maximizing the distance of each point to this hyperplane.
+						Â 
+						In the image above we can see this illustrated for the example
+						ofÂ points plotted in 2D-space. The set of points are labeled
+						Â with two categories (illustrated here with black and white
+						points) and SVM chooses the hypeplane that maximizes the margin
+						between the two classes. This hyperplane is given by
+						< \vec{w} \cdot \vec{x} > + b = \sum_i y_i \alpha_i < \vec{x_i}
+						\cdot \vec{x}> + b = 0
+						whereÂ  \vec{x_i} = (x_{i1}, x_{i2}, .. , x_{in} ) Â is a n-dimensional
+						input vector,Â  y_i Â is its output value,Â  \vec{w} = (w_1, w_2,
+						.. , w_n ) Â is the weight vector (theÂ  normalÂ  vector)
+						definingÂ the hyperplane and theÂ  \alpha_i Â terms are the
+						Lagrangian multipliers.
+						Once the hyperplane is constructed (the vectorÂ  \vec{w} Â is defined)
+						with a training set, the class of any other input vectorÂ 
+						\vec{x_i} Â can be determined: Â if \vec{w} \cdot \vec{x_i} + b
+						\ge 0 Â then it belongs to the positive class (the class we are
+						interested in), otherwise it belongs to the negative class (all of
+						the other classes).
+						We can already see this leads to two interesting questions:
+						1. SVM only seems to work when the two classes areÂ  linearly
+						separable . How can we deal withÂ  non-linear datasets ? Here I
+						feel the urge to point out that the Naive Bayes and Maximum
+						Entropy are linear classifiers as well and most text documents
+						will be linear. Our training example of Amazon book reviews will
+						be linear as well. But an explanation of the SVM system will not
+						be complete without an explanation of Kernel functions.
+						2. SVM only seems to be able to separate the dataset into two
+						classes? How can we deal with datasets with more than two classes.
+						For Sentiment Classification we have for example three classes
+						(positive, neutral, negative) and for Topic Classification we can
+						have even more than that.
+						Kernel Functions:
+						The classical SVM system requires that the dataset is linearly
+						separable, i.e. there is a single hyperplane which can separate
+						the two classes. For non-linear datasets a Kernel function is used
+						to map the data to a higher dimensional space in which it is
+						linearly separable.Â  This video gives a good illustation of such
+						a mapping. In this higher dimensional feature space, the classical
+						SVM system can then be used to construct a hyperplane.
+						Multiclass classification:
+						The classical SVM system is a binary classifier, meaning that it can
+						only separate the dataset into Â two classes. To deal with
+						datasets with more than two classes usually the dataset is reduced
+						to a binary class dataset with which the SVM can work. There are
+						two approaches for decomposing a multiclass classification
+						problemÂ to a binary classification problem: the one-vs-all and
+						one-vs-one approach.
+						In the one-vs-all approach one SVM Classifier is build per class.
+						This Classifier takes that one class as the positive class and the
+						rest of the classes as the negative class. A datapoint is then
+						only classified within a specific class if it is accepted by that
+						Classâ?? Classifier and rejected by all other classifiers.
+						Although this can lead to accurate results (if the dataset is
+						clustered), a lot of datapoints can also be left unclassified (if
+						the dataset is not clustered).
+						In the one-vs-one approach, you build one SVM Classifier per chosen
+						pair of classes. Since there areÂ  0.5N(N-1) Â possible pair
+						combinations for a set of N classes, this means you have to
+						construct more Classifiers. Datapoints are then categorized in the
+						class for which they have received the most points.
+						In our example, there are only three classes (positive, neutral,
+						negative) so there is no real difference between these two
+						approaches. In both approaches we have to construct two
+						hyperplanes; positive vs the rest and negative vs the rest.Â 
+						What to expect:
+						For the purpose of testing these Classification methods, I have
+						collected >300.000 book reviews of 10 different books from
+						Amazon.com. I will use a part of these book reviews for training
+						purposes and a part as the test dataset. In the next few blogs I
+						will try to automatically classify the sentiment of these reviews
+						with the four models described above.
+						PS:Â  Please feel free to contact me if you see missing or unclear
+						information.
+						PS2 : Dont forget to follow my blog.
+						â??â??â??â??â??â??â??â??â??â??â??â??â??-
+						[1] Machine Learning Literature:
+						Foundations of Statistical Natural Language Processing Â by Manning and
+						Schutze,
+						Machine Learning: A probabilistic perspective Â by Kevin P. Murphy,
+						Foundations of Machine Learning Â by Mehryar Mohri
+						Move to top
+						[2]Sentiment Analysis literature:
+						There is already a lot of information available and a lot of research
+						done on Sentiment Analysis. Â To get a basic understanding and
+						some background information, you can read Pang et.al.â??s 2002Â 
+						article . In this article,Â the different Classifiers are
+						explained and compared for sentiment analysis of Movie reviews
+						(IMDB). This research was very close toÂ Turneyâ??s 2002 research
+						on Sentiment Analysis of movie reviews (seeÂ  article ). You can
+						also read Bo Pang and Lillian Leeâ??s 2009 articleÂ  , whichÂ is
+						more general in nature (about the challenges of SA, the
+						differentÂ MLÂ techniques Â etc.)
+						There are also two relevant books:Â  Web Data Mining Â andÂ  Sentiment
+						Analysis , both by Bing Liu. And last but not least, works ofÂ 
+						Socher Â are also quiet interestingÂ (seeÂ  paper ,Â  website
+						Â containing live demo); it even has inspired thisÂ  kaggle
+						competition .
+						Move to top
+						[3] Naive Bayes Literature:
+						Machine Learning Â by Tom Mitchel, Stanfordâ??sÂ  IR-book , Sebastian
+						Raschkaâ??sÂ  blog-post , Stanfordâ??s onlineÂ  NLP course .
+						Move to top
+						[4]Maximum Entropy Literature:
+						Using Maximum Entropy for text classification Â (1999),Â  A simple
+						introduction to Maximum Entropy models Â (1997),Â  A brief MaxEnt
+						tutorial , another good MIT article .
+						Move to top
+						[6]SVM Literature:
+						ThisÂ  youtube video Â gives a general idea about SVM. For a more
+						technical explanation,Â  this Â andÂ Â  thisÂ  article can be
+						read.Â  Here Â you can find a good explanation as well as a list
+						of the mostly usedÂ Kernel functions.Â  one-vs-one and one-vs-all
+						.
+						Move to top
+						[7] Sentiment Lexicons:
+						I have selected a list of sentiment analysis lexicons;Â mostÂ of
+						these were mentioned in theÂ  Natural Language Processing
+						Â course, the rest are fromÂ  stackoverflow .Â 
+						WordStat sentiment Dictionary ; This is probably one of the largest
+						lexicons freely available. It containsÂ ~14.000 words ( 9164
+						negative and 4847 positive words ) and gives words a binary
+						classification (positive or a negative ) score.
+						Bill McDonalds Â 2014 Master dictionary, containing ~85.000 word
+						Harvard Inquirer ; Contains about ~11.780 words and has a more
+						complex way of â??scoringâ?? words; each word can be scored in 15+
+						categories; words can be Positiv-Negative, Strong-Weak,
+						Active-Passive, Pleasure-Pain, words can indicate pleasure, pain,
+						virtue and vice etc etc
+						SentiWordNet ; gives the words a positive or negative score between 0 and 1.
+						ItÂ contains about 117.660 words, however only ~29.000 of these
+						words have been scored (either positive or negative).
+						MPQA ; contains about ~8.200 words and binary classifiesÂ each word
+						(as either positive or as negative). It also gives additional
+						information such as whether a word is an adjective or a noun and
+						whether a word is â??strong subjectiveâ?? or â??weak
+						subjectiveâ??.
+						Bing Liuâ??s opinion lexicon ; contains 4.782 negative and 2.005
+						positive words.
+						Including Emoticons in your dictionary;
+						None of the dictionaries described above contain emoticons, which
+						might be an essential part of text if you are analyzing social
+						media. So how can we include emoticons in our subjectivity
+						analysis? Everybody knowsÂ  :) Â is a positive andÂ  :( Â is a
+						negative emoticon but what exactly doesÂ  :-| Â mean and how is it
+						different from :-/?
+						There are a few emoticon sentimentÂ dictionaries on the web which you
+						could use;Â  Emoticon Sentiment Lexicon Â created by Hogenboom et.
+						al., containing a list of Â 477 emoticons which are scored either
+						1 (positive), 0 (neutral) or -1 (negative).Â You could also make
+						your own emoticon sentiment dictionary by giving the emoticons the
+						same score as their meaning in words.
+						Views: 18977
+						Tags:
+						Like 8 members like this
+						Share Tweet Facebook
+						Next Post >
+						Comment
+						You need to be a member of Data Science Central to add comments!
+						Join Data Science Central
+						Comment by Leo Li on January 25, 2016 at 5:11pm
+						good article. #really quantitative! Any empirical result?
+						RSS
+						Welcome to
+						Data Science Central
+						Sign Up
+						or Sign In
+						Or sign in with:
+						Follow Us
+						@DataScienceCtrl  |  RSS Feeds
+						Top Content
+						Edit
+						1 Tensorflow Tutorial : Part 1 &ndash;
+						Introduction Tensorflow Tutorial : Part 1 &ndash;
+						Introduction 2 The Slow Decline of Google Search The Slow Decline
+						of Google Search 3 How to Analyze Big Data with Excel How to
+						Analyze Big Data with Excel 4 AI&rsquo;s
+						Ethical Dilemma &ndash;
+						An Unexpectedly Urgent Problem AI&rsquo;s
+						Ethical Dilemma &ndash;
+						An Unexpectedly Urgent Problem 5 16 analytic disciplines compared
+						to data science 16 analytic disciplines compared to data science 6
+						Top 6 Data Modeling Tools Top 6 Data Modeling Tools
+						RSS
+						View All
+						Announcements
+						Data Science Models &Tools at Open Data Science Conference
+						Agile Data Mastering With Dr. Michael Stonebraker
+						Moving from BI to Automated Machine Learning
+						Maximize the ROI of any Big Data Investment
+						Unveiling Anaconda Enterprise 5
+						Join data scientists from around the globe October 9-12
+						Deadline Approaching - Earn Your M.S. in Data Science Online
+						Boost Your Business Intelligence
+						Machine Learning Automation - Use Case
+						The Future of Data is Here &ndash;
+						See you in December
+						Videos
+						Real-Time Analytics for IoT with Apache Edgent and IBM Streams Real-Time
+						Analytics for IoT with Apache Edgent and IBM Streams
+						Added by Tim Matteson 0 Comments 0 Likes
+						Predictive Analytics for Supply Chain Management Predictive Analytics for
+						Supply Chain Management
+						Added by Tim Matteson 0 Comments 3 Likes
+						Add Videos
+						View All
+						Facebook
+						Resources Top Categories
+						Machine Learning  
+						R Programming   
+						Python for Data Science   
+						Visualization, Dashboards  
+						NoSQL and NewSQL  
+						Big Data  
+						Cheat Sheets
+						Internet of Things  
+						Excel  
+						Â© 2017 Data Science Central Powered by Website builder | Create
+						website | Ning.com
+						Badges | Report an Issue | Privacy Policy | Terms of Service
+						Hello, you need to enable JavaScript to use Data Science Central.
+						Please check your browser settings or contact your system administrator.
+					</h:Body>
+				</r:li>
+			</r:Alt>
+		</d:description>
+		<d:Coverage>
+			<r:Alt>
+			</r:Alt>
+		</d:Coverage>
+		<d:Identifier>
+			<r:Alt>
+				<r:li r:ID='DocumentHashCode'>-236768662740471526</r:li>
+			</r:Alt>
+		</d:Identifier>
+	</r:Description>
+</r:RDF>
